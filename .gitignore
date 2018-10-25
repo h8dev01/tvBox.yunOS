@@ -1,0 +1,7 @@
+*.apk
+*.img
+*__config.new
+?.bak
+?.txt
+[0-9]
+[0-9][0-9]

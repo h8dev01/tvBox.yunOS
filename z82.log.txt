@@ -1,0 +1,2663 @@
+SysRq : Emergency Remount R/O
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+EXT4-fs (mmcblk0p18): re-mounted. Opts: (null)
+EXT4-fs (mmcblk0p16): re-mounted. Opts: (null)
+EXT4-fs (mmcblk0p15): re-mounted. Opts: (null)
+Emergency Remount complete
+Restarting system with command ''.
+CPU will restart.þ
+Bootrom start
+Boot from eMMC
+Starting fastboot ...
+
+
+System startup
+DDRS
+Reg Version:  v1.1.0
+Reg Time:     2016/1/18  14:01:18
+Reg Name:     hi3798mdmo1g_hi3798mv100_ddr3_1gbyte_16bitx2_4layers_emmc.reg
+
+Jump to DDR
+
+
+Fastboot 3.3.0 (wangbin@ubuntu) (Sep 20 2017 - 18:00:09)
+
+Fastboot:      Version 3.3.0
+Build Date:    Sep 20 2017, 18:00:28
+CPU:           Hi3798Mv100 
+Boot Media:    eMMC
+DDR Size:      1GB
+
+Check nand flash controller v610. found
+Special NAND id table Version 1.36
+Nand ID: 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
+No NAND device found!!!
+
+MMC/SD controller initialization.
+MMC/SD Card:
+    MID:         0x70
+    Read Block:  512 Bytes
+    Write Block: 512 Bytes
+    Chip Size:   7296M Bytes (High Capacity)
+    Name:        "M7280"
+    Chip Type:   MMC
+    Version:     4.0
+    Speed:       52000000Hz
+    Bus Width:   8bit
+    Boot Addr:   0 Bytes
+
+Boot Env on eMMC
+    Env Offset:          0x00100000
+    Env Size:            0x00010000
+    Env Range:           0x00010000
+product_init,286: Get ID_WORD lock flag : 0
+
+
+SDK Version: HiSTBAndroidV600R001C00CP0007_v2016022217
+
+deviceinfo addr : [0x001200000] 
+[swfastboot_flash_read,36]BaseAddress:0x1200000, DataSize:0x100000, offset:0x0, bytes:0x514
+[sw_devinfo_check,186] start...
+[sw_devinfo_check,204] ok,checksum:0x10b8
+[sw_devinfo_init,54] data at 0x001200000 is ok
+[0] count:[5] name:[serialno] value:[0010049905010820010B649A08054602]
+[1] count:[5] name:[mac] value:[64:9A:08:05:46:02]
+[2] count:[5] name:[standard] value:[1080i_50Hz]
+[3] count:[5] name:[secureline] value:[100]
+[4] count:[5] name:[cmcc_sn] value:[8Q4410820B253797]
+[sw_devinfo_init,81] ok
+[sw_set_gpio,55]
+[sw_set_gpio,174] config cvbs mode
+bootargs:[console=ttyAMA0,115200 blkdevparts=mmcblk0:1M(fastboot),1M(bootargs),16M(recovery),2M(deviceinfo),8M(baseparam),8M(pqparam),8M(logo),32M(fastplay),16M(kernel),2M(misc),8M(userapi),8M(hibdrv),8M(qbflag),300M(qbdata),32M(private),512M(cache),768M(system),5566M(userdata) androidboot.mac=64:9A:08:05:46:02 androidboot.standard=1080i_50Hz androidboot.serialno=0010049905010820010B649A08054602 ]
+sw_ir_detect_recovery begin  500 count 
+No key received
+sw_ir_detect_recovery ok  
+
+Reserve Memory
+    Start Addr:          0x3FFFE000
+    Bound Addr:          0x8D45000
+    Free  Addr:          0x3EB9D000
+    Alloc Block:  Addr        Size
+                  0x3FBFD000       4194304
+                  0x3F8FC000       3145728
+                  0x3F8F9000       8192
+                  0x3F878000       524288
+                  0x3F843000       212992
+                  0x3F742000       1048576
+                  0x3F73E000       12288
+                  0x3F3B9000       3686400
+                  0x3F223000       1658880
+                  0x3EE9E000       3686400
+                  0x3EBA0000       3133440
+                  0x3EB9D000       8192
+
+Hibernate!! drv  phyaddr 0x3FC00000
+Hibernate!! user api phyaddr 0x3F900000
+Hibernate!! userapi  start 0x5E00000, size 0x800000
+Hibernate!! drv  start 0x6600000, size 0x800000
+Hibernate!! flag start 0x6E00000, size 0x800000
+Hibernate!! data start 0x7600000, size 0x12C00000
+Press Ctrl+C to stop autoboot
+
+MMC read: dev # 0, block # 155648, count 20480 ... 20480 blocks read: OK
+
+Found Initrd at 0x04E00000 (Size 651085 Bytes), align at 2048 Bytes
+
+## Booting kernel from Legacy Image at 01ffc7c0 ...
+   Image Name:   Linux-3.10.0_s40
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    7485960 Bytes = 7.1 MiB
+   Load Address: 02000000
+   Entry Point:  02000000
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+Booting Linux on physical CPU 0x0
+Linux version 3.10.0_s40 (jenkins@Jenkins-Pub01) (gcc version 4.4.1 (Hisilicon_v200(gcc4.4-290+glibc-2.11+eabi+nptl)) ) #1 SMP Tue Aug 29 00:52:26 CST 2017
+CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+Machine: bigfish
+cma: CMA: reserved 420 MiB at 24400000
+phy:3fc00000 pfn:3fc00
+phy:3f900000 pfn:3f900
+cma: CMA: reserved 4 MiB at 3ec00000
+Memory policy: ECC disabled, Data cache writealloc
+CPU: Hi3798Mv100 
+PERCPU: Embedded 8 pages/cpu @819b3000 s12224 r8192 d12352 u32768
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 260096
+Kernel command line: console=ttyAMA0,115200 blkdevparts=mmcblk0:1M(fastboot),1M(bootargs),16M(recovery),2M(deviceinfo),8M(baseparam),8M(pqparam),8M(logo),32M(fastplay),16M(kernel),2M(misc),8M(userapi),8M(hibdrv),8M(qbflag),300M(qbdata),32M(private),512M(cache),768M(system),5566M(userdata) androidboot.mac=64:9A:08:05:46:02 androidboot.standard=1080i_50Hz androidboot.serialno=0010049905010820010B649A08054602  initrd=0x4E00000,0x9EF4D mem=1G mmz=ddr,0,0,420M
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1024MB = 1024MB total
+Memory: 574784k/574784k available, 473792k reserved, 0K highmem
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+    vmalloc : 0xc0800000 - 0xff000000   (1000 MB)
+    lowmem  : 0x80000000 - 0xc0000000   (1024 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .text : 0x80008000 - 0x80e39134   (14533 kB)
+      .init : 0x80e3a000 - 0x80ea7fc0   ( 440 kB)
+      .data : 0x80ea8000 - 0x80fd33e8   (1197 kB)
+       .bss : 0x80fd33e8 - 0x811ac3dc   (1892 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Hierarchical RCU implementation.
+NR_IRQS:192
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 178956ms
+Console: colour dummy device 80x30
+Calibrating delay loop... 1949.69 BogoMIPS (lpj=974848)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+ftrace: allocating 31787 entries in 94 pages
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x80aa3a68 - 0x80aa3ac0
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (7829.50 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+[300 ERROR-Invalid]:MCE_Init[1856]:ERR: get PDM Param
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 8 bytes.
+Serial: AMBA PL011 UART driver
+uart:0: ttyAMA0 at MMIO 0xf8b00000 (irq = 81) is a PL011 rev2
+console [ttyAMA0] enabled
+uart:1: ttyAMA1 at MMIO 0xf8006000 (irq = 82) is a PL011 rev2
+uart:2: ttyAMA2 at MMIO 0xf8b02000 (irq = 83) is a PL011 rev2
+bio: create slab <bio-0> at 0
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+Linux video capture interface: v2.00
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.16
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+Switching to clocksource timer3
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+TCP: reno registered
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 632K (84e00000 - 84e9e000)
+NetWinder Floating Point Emulator V0.97 (double precision)
+CPU PMU: probing PMU on CPU 0
+hw perfevents: enabled with ARMv7 Cortex-A7 PMU driver, 5 counters available
+Hibernate drv partition: offset 0x6E00000, size 0x800000
+Hibernate snapshot partition: offset 0x7600000, size 0x12C00000
+Hisilicon Pm!! module loaded
+VFS: Disk quotas dquot_6.5.2
+Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Registering sdcardfs 2.1.4
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+fuse init (API version 7.22)
+msgmni has been set to 1971
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+io scheduler noop registered
+io scheduler deadline registered (default)
+io scheduler cfq registered
+brd: module loaded
+loop: module loaded
+input: Hi keyboard as /devices/virtual/input/input0
+input: Hi mouse as /devices/virtual/input/input1
+input: qwerty as /devices/virtual/input/input2
+Hi Android vinput driver init successful!
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+libphy: himii: probed
+Up port phy at 0x01 is connect
+libphy: PHY himii:1f not found
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbotg: usb otg driver registeredusbcore: registered new interface driver cdc_wdm
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+dwc_otg: version 3.00a 10-AUG-2012
+Core Release: 3.10a
+Setting default values for core params
+Using Buffer DMA mode
+Dedicated Tx FIFOs mode
+g_ffs: file system registered
+>>>  init /projects/projects/ANDROID-Hi3798M-YUNOS-EMMC-kk-4.4/device/hisilicon/bigfish/sdk/source/kernel/linux-3.10.y/drivers/usb/usbir/usb-ir.c  usb_usbir_init
+usbcore: registered new interface driver usbir
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+device-mapper: ioctl: 4.24.0-ioctl (2013-01-15) initialised: dm-devel@redhat.com
+mmc0: BKOPS_EN bit is not set
+hi_mci0: eMMC/MMC/SD Device NOT detected!
+mmc0: new high speed DDR MMC card at address 0001
+mmcblk0: mmc0:0001 M72808 7.12 GiB 
+mmcblk0boot0: mmc0:0001 M72808 partition 1 4.00 MiB
+mmcblk0boot1: mmc0:0001 M72808 partition 2 4.00 MiB
+ mmcblk0: p1(fastboot) p2(bootargs) p3(recovery) p4(deviceinfo) p5(baseparam) p6(pqparam) p7(logo) p8(fastplay) p9(kernel) p10(misc) p11(userapi) p12(hibdrv) p13(qbflag) p14(qbdata) p15(private) p16(cache) p17(system) p18(userdata)
+hidraw: raw HID events driver (C) Jiri Kosina
+ mmcblk0boot1: unknown partition table
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+zram: Created 1 device(s) ...
+ashmem: initialized
+ mmcblk0boot0: unknown partition table
+logger: created 256K log 'log_main'
+logger: created 256K log 'log_events'
+logger: created 256K log 'log_radio'
+logger: created 256K log 'log_system'
+
+Mali: Mali device driver loaded
+usbcore: registered new interface driver snd-usb-audio
+oprofile: using timer interrupt.
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (15774 buckets, 63096 max)
+ctnetlink v0.93: registering with nfnetlink.
+NF_TPROXY: Transparent proxy support initialized, version 4.1.0
+NF_TPROXY: Copyright (c) 2006-2007 BalaBit IT Ltd.
+xt_time: kernel timezone is -0000
+IPVS: Registered protocols ()
+IPVS: Connection hash table configured (size=4096, memory=32Kbytes)
+IPVS: Creating netns size=776 id=0
+IPVS: ipvs loaded.
+ip_tables: (C) 2000-2006 Netfilter Core Team
+ipt_CLUSTERIP: ClusterIP Version 0.8 loaded successfully
+arp_tables: (C) 2002 David S. Miller
+TCP: cubic registered
+NET: Registered protocol family 10
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+NET: Registered protocol family 17
+Bridge firewalling registered
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+lib80211: common routines for IEEE802.11 drivers
+Key type dns_resolver registered
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+console [netcon0] enabled
+netconsole: network logging started
+Load hi_tde.ko success.		(SDK_VERSION:[HiSTBAndroidV600R001C00CP0007_v2016022217] Build Time:[Aug 29 2017, 00:51:30])
+Load hi_fb.ko success.		(SDK_VERSION:[HiSTBAndroidV600R001C00CP0007_v2016022217] Build Time:[Aug 29 2017, 00:49:51])
+Load hi_jpegdec.ko success.	(SDK_VERSION:[HiSTBAndroidV600R001C00CP0007_v2016022217] Build Time:[Aug 29 2017, 00:50:01])
+DieID is locked!
+hisi-sndcard hisi-sndcard:  aiao-hifi <-> hisi-i2s mapping ok
+Load hi_png.ko success.		(SDK_VERSION:[HiSTBAndroidV600R001C00CP0007_v2016022217] Build Time:[Aug 29 2017, 00:51:21])
+Load hi_jpegenc.ko success.	(SDK_VERSION:[HiSTBAndroidV600R001C00CP0007_v2016022217] Build Time:[Aug 29 2017, 00:50:01])
+enter temperature_control_thread
+ALSA device list:
+  #0: HISI-AIAO
+Æreeing unused kernel memory: 436K (80e3a000 - 80ea7000)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+init: /init.bigfish.rc: 152: ignored duplicate definition of service 'release_eth0'
+init: /init.bigfish.rc: 157: ignored duplicate definition of service 'release_eth1'
+init:  not 512M version
+init (1): /proc/1/oom_adj is deprecated, please use /proc/1/oom_score_adj instead.
+init: /dev/hw_random not found
+énit: cannot open '/initlogo.rle'
+EXT4-fs (mmcblk0p17): mounted filesystem with ordered data mode. Opts: (null)
+EXT4-fs (mmcblk0p18): 4 orphan inodes deleted
+EXT4-fs (mmcblk0p18): recovery complete
+EXT4-fs (mmcblk0p18): mounted filesystem with ordered data mode. Opts: (null)
+EXT4-fs (mmcblk0p16): mounted filesystem with ordered data mode. Opts: (null)
+EXT4-fs (mmcblk0p15): mounted filesystem with ordered data mode. Opts: (null)
+init: /dev/hw_random not found
+healthd: No charger supplies found
+libphy: himii:01 - Link is Down
+healthd: BatteryStatusPath not found
+healthd: BatteryHealthPath not found
+init: cannot find '/system/bin/dbus-daemon', disabling 'dbus'
+healthd: BatteryPresentPath not found
+healthd: BatteryCapacityPath not found
+healthd: BatteryVoltagePath not found
+healthd: BatteryTemperaturePath not found
+healthd: BatteryTechnologyPath not found
+binder: 1389:1389 transaction failed 29189, size 0-0
+init: cannot find '/data/data/com.android.smart.terminal.iptv/bin/IptvServ', disabling 'IptvServ'
+init: cannot find '/data/data/com.android.smart.terminal.iptv/bin/sy_tr069', disabling 'sy_tr069'
+init: cannot find '/system/bin/netconfig', disabling 'netconfig'
+init: cannot find '/system/bin/dtvserver', disabling 'dtvserver'
+init: cannot find '/system/bin/gpio-led', disabling 'gpio-led'
+init: cannot find '/system/bin/hidns-sd', disabling 'hidns-sd'
+init: cannot find '/system/bin/usb-driver', disabling 'usb-driver'
+init: property 'sys.powerctl' doesn't exist while expanding '${sys.powerctl}'
+init: powerctl: cannot expand '${sys.powerctl}'
+init: property 'sys.sysctl.extra_free_kbytes' doesn't exist while expanding '${sys.sysctl.extra_free_kbytes}'
+init: cannot expand '${sys.sysctl.extra_free_kbytes}' while writing to '/proc/sys/vm/extra_free_kbytes'
+root@OPENBASE_HI3798M:/ # [ir_ioctl][901] ----- ioctl: CMD_IR_OPEN_IRSTD !!! -----
+
+
+Welcome to HiYunOS
+
+
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+hiusb-ehci hiusb-ehci.0: HIUSB EHCI
+hiusb-ehci hiusb-ehci.0: new USB bus registered, assigned bus number 1
+hiusb-ehci hiusb-ehci.0: irq 98, io mem 0xf9890000
+hiusb-ehci hiusb-ehci.0: USB 0.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 2 ports detected
+hiusb-ehci hiusb-ehci.1: HIUSB EHCI
+hiusb-ehci hiusb-ehci.1: new USB bus registered, assigned bus number 2
+hiusb-ehci hiusb-ehci.1: irq 94, io mem 0xf9930000
+hiusb-ehci hiusb-ehci.1: USB 0.0 started, EHCI 1.00
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+hiusb-ohci hiusb-ohci.0: HIUSB OHCI
+hiusb-ohci hiusb-ohci.0: new USB bus registered, assigned bus number 3
+hiusb-ohci hiusb-ohci.0: irq 99, io mem 0xf9880000
+hub 3-0:1.0: USB hub found
+hub 3-0:1.0: 2 ports detected
+hiusb-ohci hiusb-ohci.1: HIUSB OHCI
+hiusb-ohci hiusb-ohci.1: new USB bus registered, assigned bus number 4
+hiusb-ohci hiusb-ohci.1: irq 95, io mem 0xf9920000
+hub 4-0:1.0: USB hub found
+hub 4-0:1.0: 1 port detected
+rtk_btusb: RTKBT_RELEASE_NAME: 20170401_TV_ANDROID_4.4(Beta)
+rtk_btusb: Realtek Bluetooth USB driver module init, version 4.1.4
+rtk_btusb: Register usb char device interface for BT driver
+usbcore: registered new interface driver rtk_btusb
+tntfs: module license 'Commercial. For support email ntfs-support@tuxera.com.' taints kernel.
+Disabling lock debugging due to kernel taint
+Tuxera NTFS driver 3014.6.29 [Flags: R/W MODULE].
+usb 2-1: new high-speed USB device number 2 using hiusb-ehci
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+libphy: himii:01 - Link is Up - 100/Full
+IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+usb 3-2: new low-speed USB device number 2 using hiusb-ohci
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+input: Logitech USB Optical Mouse as /devices/platform/hiusb-ohci.0/usb3/3-2/3-2:1.0/input/input3
+hid-generic 0003:046D:C06A.0001: input,hidraw0: USB HID v1.11 Mouse [Logitech USB Optical Mouse] on usb-hiusb-ohci-2/input0
+input: alitv-sensor as /devices/virtual/input/input4
+input: alitv-mouse as /devices/virtual/input/input5
+input: alitv-Vcontroller as /devices/virtual/input/input6
+input: alitv-motion as /devices/virtual/input/input7
+
+root@OPENBASE_HI3798M:/ # warning: `zygote' uses 32-bit capabilities (legacy support in use)
+rw
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+root@OPENBASE_HI3798M:/ # cd /slowmemorykiller: lowmem_shrink: convert oom_adj to oom_score_adj:
+lowmemorykiller: oom_adj 0 => oom_score_adj 0
+lowmemorykiller: oom_adj 1 => oom_score_adj 58
+lowmemorykiller: oom_adj 2 => oom_score_adj 117
+lowmemorykiller: oom_adj 3 => oom_score_adj 176
+lowmemorykiller: oom_adj 9 => oom_score_adj 529
+lowmemorykiller: oom_adj 15 => oom_score_adj 1000
+ystpppoe-status: pppoe is running!
+		I will stop it frist
+The last session is , to kill it.
+root@OPENBASE_HI3798M:/ # cd /system/                                          sdcardfs: version 2.1.4
+sdcardfs: dev_name -> /data/media
+sdcardfs: options -> derive=legacy,reserved_mb=100
+sdcardfs: created packagelist pkgld/2075
+sdcardfs: read_package_list
+sdcardfs: the sbi->obbpath is found
+sdcardfs: inotify event: 00000400
+sdcardfs: inotify event: 00008000
+sdcardfs: read_package_list
+cfg80211: Calling CRDA to update world regulatory domain
+RTL871X: module init start
+RTL871X: rtl8188fu v4.3.23_17926.20160531_beta
+RTL871X: build time: Aug 18 2017 20:05:13
+RTL871X: hal_com_config_channel_plan chplan:0x20
+RTL871X: rtw_ndev_init(wlan0) if1 mac_addr=64:9a:08:05:46:03
+RTL871X: rtw_ndev_init(p2p0) if2 mac_addr=66:9a:08:05:46:03
+usbcore: registered new interface driver rtl8188fu
+RTL871X: module init ret=0
+/mIPv6: ADDRCONF(NETDEV_UP): p2p0: link is not ready
+IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+edsdcardfs: inotify event: 00000400
+sdcardfs: inotify event: 00008000
+sdcardfs: read_package_list
+iasdcardfs: the sbi->obbpath is found
+
+root@OPENBASE_HI3798M:/system/media # ll
+-rw-r--r-- root     root         5717 2008-08-01 20:00 agreement.html
+drwxr-xr-x root     root              1970-01-01 08:01 audio
+-rw-r--r-- root     root      2080545 2008-08-01 20:00 bootanimation.zip
+-rw-r--r-- root     root         1572 2008-08-01 20:00 homeshell_screenconfig.xml
+drwxr-xr-x root     root              1970-01-01 08:01 images
+-rw-r--r-- root     root         1712 2008-08-01 20:00 tvguide_steps.json
+-rw-r--r-- root     root        85621 2008-08-01 20:00 tvguide_welcome.png
+-rw-r--r-- root     root     22371862 2008-08-01 20:00 videocache1.mp4
+root@OPENBASE_HI3798M:/system/media # mkdir 1
+root@OPENBASE_HI3798M:/system/media # nf_conntrack: automatic helper assignment is deprecated and it will be removed soon. Use the iptables CT target to attach helpers instead.
+
+130|root@OPENBASE_HI3798M:/system/media # echo > boot bootanimation.zip                                                            < 
+root@OPENBASE_HI3798M:/system/media # chmod 444 boot44 bootanimation.zip                                                          < 
+root@OPENBASE_HI3798M:/system/media # echo a > agcho > agreement.html                                                          < 
+root@OPENBASE_HI3798M:/system/media # echo > homell_screenconfig.xml                                                          < 
+root@OPENBASE_HI3798M:/system/media # echo > tvg
+tvguide_steps.json  tvguide_welcome.png 
+root@OPENBASE_HI3798M:/system/media # echo > tvguide_                          s> tvguide_steps.json                                                          < 
+root@OPENBASE_HI3798M:/system/media # echo > tvg
+tvguide_steps.json  tvguide_welcome.png 
+root@OPENBASE_HI3798M:/system/media # echo > tvguide_                          wThe current session is , try to connect.
+busybox setsid pppd  plugin librp-pppoe.so eth0 rp_pppoe_sess  debug logfd 1 lcp-restart 2 noipdefault noauth default-asyncmap show-password nodetach mtu 1492 mru 1492 noaccomp nodeflate nopcomp novj usepeerdns novjccomp lcp-echo-interval 20 lcp-echo-failure 3 user 075742995356@iptv.gd password 60622834 
+init: untracked pid 2704 exited
+ tvguide_welcome.png                                                          < 
+root@OPENBASE_HI3798M:/system/media # echo > vidho > videocache1.mp4                                                          < 
+root@OPENBASE_HI3798M:/system/media # ll
+drwxrwxrwx root     log               2014-01-01 00:00 1
+-rw-r--r-- root     root            1 2014-01-01 00:00 agreement.html
+drwxr-xr-x root     root              1970-01-01 08:01 audio
+-r--r--r-- root     root            1 2014-01-01 00:00 bootanimation.zip
+-rw-r--r-- root     root            1 2014-01-01 00:00 homeshell_screenconfig.xml
+drwxr-xr-x root     root              1970-01-01 08:01 images
+-rw-r--r-- root     root            1 2014-01-01 00:00 tvguide_steps.json
+-rw-r--r-- root     root            1 2014-01-01 00:00 tvguide_welcome.png
+-rw-r--r-- root     root            1 2014-01-01 00:00 videocache1.mp4
+root@OPENBASE_HI3798M:/system/media # chmod 444 *pppd-status: pppd is running!
+		I will stop it frist
+The last session is , to kill it.
+
+root@OPENBASE_HI3798M:/system/media # chmod 555 audroot@OPENBASE_HI3798M:/system/media # chmod 555 audio/                          imd 555 audio/ images/                                                          <
+root@OPENBASE_HI3798M:/system/media # chmod 555 .
+root@OPENBASE_HI3798M:/system/media # ll
+dr--r--r-- root     log               2014-01-01 00:00 1
+-r--r--r-- root     root            1 2014-01-01 00:00 agreement.html
+dr-xr-xr-x root     root              1970-01-01 08:01 audio
+-r--r--r-- root     root            1 2014-01-01 00:00 bootanimation.zip
+-r--r--r-- root     root            1 2014-01-01 00:00 homeshell_screenconfig.xml
+dr-xr-xr-x root     root              1970-01-01 08:01 images
+-r--r--r-- root     root            1 2014-01-01 00:00 tvguide_steps.json
+-r--r--r-- root     root            1 2014-01-01 00:00 tvguide_welcome.png
+-r--r--r-- root     root            1 2014-01-01 00:00 videocache1.mp4
+root@OPENBASE_HI3798M:/system/media # sync
+root@OPENBASE_HI3798M:/system/media # ll 1
+root@OPENBASE_HI3798M:/system/media # ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 64:9a:08:05:46:02 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::669a:8ff:fe05:4602/64 scope link 
+       valid_lft forever preferred_lft forever
+3: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN qlen 1000
+    link/ether 64:9a:08:05:46:03 brd ff:ff:ff:ff:ff:ff
+4: p2p0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN qlen 1000
+    link/ether 66:9a:08:05:46:03 brd ff:ff:ff:ff:ff:ff
+root@OPENBASE_HI3798M:/system/media # pss
+ 2056 10008     571m S    com.android.systemui                                 
+ 2154 10011     564m S    com.aliyun.mobile.ime                                
+ 2218 10044     559m S    com.yunos.tv.app.remotecontrolserver                 
+ 2222 1000      563m S    com.yunos.tv.alitvasr                                
+ 2241 1000      562m S    com.hisilicon.android.hiRMService                    
+ 2255 1000      559m S    com.iflytek.xiri2.system                             
+ 2274 10042     561m S    com.android.hisilicon.pmqo                           
+ 2290 10062     628m S    com.teslacoilsw.launcher                             
+ 2479 10063     615m S    com.qiyi.video.pad                                   
+ 2559 10027     560m S    com.aliyun.ams.assistantservice                      
+ 2640 10063     585m S    com.qiyi.video.pad:bdservice_v1                      
+ 2667 1000      559m S    com.yunos.tv.devicemanager                           
+ 2761 10004     558m S    com.android.musicfx                                  
+root@OPENBASE_HI3798M:/system/media # pss |grep com.yunos.tv.app.remotecontroltv.app.remotecontrol                                                          <server
+ 2218 10044     559m S    com.yunos.tv.app.remotecontrolserver                 
+ 2822 0         1232 S    grep com.yunos.tv.app.remotecontrolserver 
+root@OPENBASE_HI3798M:/system/media # pf |grep com.yunos.tv.app.remotecontrolsv.app.remotecontrols                                                          <erver
+package:/system/app/RemoteControlServer.apk=com.yunos.tv.app.remotecontrolserver
+
+^C
+130|root@OPENBASE_HI3798M:/system/media # cd ..The current session is , try to connect.
+busybox setsid pppd  plugin librp-pppoe.so eth0 rp_pppoe_sess  debug logfd 1 lcp-restart 2 noipdefault noauth default-asyncmap show-password nodetach mtu 1492 mru 1492 noaccomp nodeflate nopcomp novj usepeerdns novjccomp lcp-echo-interval 20 lcp-echo-failure 3 user 075742995356@iptv.gd password 60622834 
+init: untracked pid 2847 exited
+/app
+root@OPENBASE_HI3798M:/system/app # rw
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+root@OPENBASE_HI3798M:/system/app # mv RemoteControlServer.apk                                                         <  ../ba RemoteControlServer.apk  ../bak01.app/                                       <
+root@OPENBASE_HI3798M:/system/app # sdcardfs: inotify event: 00000400
+sdcardfs: inotify event: 00008000
+sdcardfs: read_package_list
+sdcardfs: the sbi->obbpath is found
+
+root@OPENBASE_HI3798M:/system/app # pppd-status: pppd is running!
+		I will stop it frist
+The last session is , to kill it.
+ll |grep asr
+1|root@OPENBASE_HI3798M:/system/app # 1|root@OPENBASE_HI3798M:/system/app # ll |grep asr                             -asriasr asr
+-rw-r--r-- root     root       570921 2008-08-01 20:00 AliTVASR.apk
+root@OPENBASE_HI3798M:/system/app # mv AliTroot@OPENBASE_HI3798M:/system/app # mv AliTVASR.apk                              ../baSR.apk  ../bak01.app/                                                         <
+root@OPENBASE_HI3798M:/system/app # sdcardfs: inotify event: 00000400
+sdcardfs: inotify event: 00008000
+sdcardfs: read_package_list
+sdcardfs: the sbi->obbpath is found
+
+root@OPENBASE_HI3798M:/system/app # pss
+ 2056 10008     571m S    com.android.systemui                                 
+ 2154 10011     564m S    com.aliyun.mobile.ime                                
+ 2218 10044     559m S    com.yunos.tv.app.remotecontrolserver                 
+ 2222 1000      563m S    com.yunos.tv.alitvasr                                
+ 2241 1000      561m S    com.hisilicon.android.hiRMService                    
+ 2255 1000      559m S    com.iflytek.xiri2.system                             
+ 2274 10042     561m S    com.android.hisilicon.pmqo                           
+ 2290 10062     622m S    com.teslacoilsw.launcher                             
+ 2479 10063     613m S    com.qiyi.video.pad                                   
+ 2559 10027     560m S    com.aliyun.ams.assistantservice                      
+ 2640 10063     585m S    com.qiyi.video.pad:bdservice_v1                      
+ 2947 1000      559m S    com.yunos.tv.devicemanager                           
+ 2972 10004     558m S    com.android.musicfx                                  
+ 2988 1000      558m S    com.android.keychain                                 
+root@OPENBASE_HI3798M:/system/app # ps |grep pmg qo
+ 2274 10042     561m S    com.android.hisilicon.pmqo                           
+ 3026 0         1232 S    grep pmqo 
+root@OPENBASE_HI3798M:/system/app # root@OPENBASE_HI3798M:/system/app # ps |grep pmqo                              p |grep pmqo f |grep pmqo
+package:/system/app/PowerControl.apk=com.android.hisilicon.pmqo
+^C
+130|root@OPENBASE_HI3798M:/system/app # mv 
+130|root@OPENBASE_HI3798M:/system/app # ps f The current session is , try to connect.
+busybox setsid pppd  plugin librp-pppoe.so eth0 rp_pppoe_sess  debug logfd 1 lcp-restart 2 noipdefault noauth default-asyncmap show-password nodetach mtu 1492 mru 1492 noaccomp nodeflate nopcomp novj usepeerdns novjccomp lcp-echo-interval 20 lcp-echo-failure 3 user 075742995356@iptv.gd password 60622834 
+init: untracked pid 3090 exited
+|grep ams
+package:/system/app/BasicDreams.apk=com.android.dreams.basic
+^C
+130|root@OPENBASE_HI3798M:/system/app # mv Base 130|root@OPENBASE_HI3798M:/system/app # mv BasicDreams.apk                      ../pppd-status: pppd is running!
+		I will stop it frist
+The last session is , to kill it.
+bas.apk ../bak01.app/                                                           <
+root@OPENBASE_HI3798M:/system/app # sdcardfs: inotify event: 00000400
+sdcardfs: inotify event: 00008000
+sdcardfs: read_package_list
+sdcardfs: the sbi->obbpath is found
+
+root@OPENBASE_HI3798M:/system/app # reboot
+SysRq : Emergency Remount R/O
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+EXT4-fs (mmcblk0p18): re-mounted. Opts: (null)
+EXT4-fs (mmcblk0p16): re-mounted. Opts: (null)
+EXT4-fs (mmcblk0p15): re-mounted. Opts: (null)
+Emergency Remount complete
+Restarting system with command ''.
+CPU will restart.þ
+Bootrom start
+Boot from eMMC
+Starting fastboot ...
+
+
+System startup
+DDRS
+Reg Version:  v1.1.0
+Reg Time:     2016/1/18  14:01:18
+Reg Name:     hi3798mdmo1g_hi3798mv100_ddr3_1gbyte_16bitx2_4layers_emmc.reg
+
+Jump to DDR
+
+
+Fastboot 3.3.0 (wangbin@ubuntu) (Sep 20 2017 - 18:00:09)
+
+Fastboot:      Version 3.3.0
+Build Date:    Sep 20 2017, 18:00:28
+CPU:           Hi3798Mv100 
+Boot Media:    eMMC
+DDR Size:      1GB
+
+Check nand flash controller v610. found
+Special NAND id table Version 1.36
+Nand ID: 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
+No NAND device found!!!
+
+MMC/SD controller initialization.
+MMC/SD Card:
+    MID:         0x70
+    Read Block:  512 Bytes
+    Write Block: 512 Bytes
+    Chip Size:   7296M Bytes (High Capacity)
+    Name:        "M7280"
+    Chip Type:   MMC
+    Version:     4.0
+    Speed:       52000000Hz
+    Bus Width:   8bit
+    Boot Addr:   0 Bytes
+
+Boot Env on eMMC
+    Env Offset:          0x00100000
+    Env Size:            0x00010000
+    Env Range:           0x00010000
+product_init,286: Get ID_WORD lock flag : 0
+
+
+SDK Version: HiSTBAndroidV600R001C00CP0007_v2016022217
+
+deviceinfo addr : [0x001200000] 
+[swfastboot_flash_read,36]BaseAddress:0x1200000, DataSize:0x100000, offset:0x0, bytes:0x514
+[sw_devinfo_check,186] start...
+[sw_devinfo_check,204] ok,checksum:0x10b8
+[sw_devinfo_init,54] data at 0x001200000 is ok
+[0] count:[5] name:[serialno] value:[0010049905010820010B649A08054602]
+[1] count:[5] name:[mac] value:[64:9A:08:05:46:02]
+[2] count:[5] name:[standard] value:[1080i_50Hz]
+[3] count:[5] name:[secureline] value:[100]
+[4] count:[5] name:[cmcc_sn] value:[8Q4410820B253797]
+[sw_devinfo_init,81] ok
+[sw_set_gpio,55]
+[sw_set_gpio,174] config cvbs mode
+bootargs:[console=ttyAMA0,115200 blkdevparts=mmcblk0:1M(fastboot),1M(bootargs),16M(recovery),2M(deviceinfo),8M(baseparam),8M(pqparam),8M(logo),32M(fastplay),16M(kernel),2M(misc),8M(userapi),8M(hibdrv),8M(qbflag),300M(qbdata),32M(private),512M(cache),768M(system),5566M(userdata) androidboot.mac=64:9A:08:05:46:02 androidboot.standard=1080i_50Hz androidboot.serialno=0010049905010820010B649A08054602 ]
+sw_ir_detect_recovery begin  500 count 
+No key received
+sw_ir_detect_recovery ok  
+
+Reserve Memory
+    Start Addr:          0x3FFFE000
+    Bound Addr:          0x8D45000
+    Free  Addr:          0x3EB9D000
+    Alloc Block:  Addr        Size
+                  0x3FBFD000       4194304
+                  0x3F8FC000       3145728
+                  0x3F8F9000       8192
+                  0x3F878000       524288
+                  0x3F843000       212992
+                  0x3F742000       1048576
+                  0x3F73E000       12288
+                  0x3F3B9000       3686400
+                  0x3F223000       1658880
+                  0x3EE9E000       3686400
+                  0x3EBA0000       3133440
+                  0x3EB9D000       8192
+
+Hibernate!! drv  phyaddr 0x3FC00000
+Hibernate!! user api phyaddr 0x3F900000
+Hibernate!! userapi  start 0x5E00000, size 0x800000
+Hibernate!! drv  start 0x6600000, size 0x800000
+Hibernate!! flag start 0x6E00000, size 0x800000
+Hibernate!! data start 0x7600000, size 0x12C00000
+Press Ctrl+C to stop autoboot
+
+MMC read: dev # 0, block # 155648, count 20480 ... 20480 blocks read: OK
+
+Found Initrd at 0x04E00000 (Size 651085 Bytes), align at 2048 Bytes
+
+## Booting kernel from Legacy Image at 01ffc7c0 ...
+   Image Name:   Linux-3.10.0_s40
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    7485960 Bytes = 7.1 MiB
+   Load Address: 02000000
+   Entry Point:  02000000
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+Booting Linux on physical CPU 0x0
+Linux version 3.10.0_s40 (jenkins@Jenkins-Pub01) (gcc version 4.4.1 (Hisilicon_v200(gcc4.4-290+glibc-2.11+eabi+nptl)) ) #1 SMP Tue Aug 29 00:52:26 CST 2017
+CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+Machine: bigfish
+cma: CMA: reserved 420 MiB at 24400000
+phy:3fc00000 pfn:3fc00
+phy:3f900000 pfn:3f900
+cma: CMA: reserved 4 MiB at 3ec00000
+Memory policy: ECC disabled, Data cache writealloc
+CPU: Hi3798Mv100 
+PERCPU: Embedded 8 pages/cpu @819b3000 s12224 r8192 d12352 u32768
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 260096
+Kernel command line: console=ttyAMA0,115200 blkdevparts=mmcblk0:1M(fastboot),1M(bootargs),16M(recovery),2M(deviceinfo),8M(baseparam),8M(pqparam),8M(logo),32M(fastplay),16M(kernel),2M(misc),8M(userapi),8M(hibdrv),8M(qbflag),300M(qbdata),32M(private),512M(cache),768M(system),5566M(userdata) androidboot.mac=64:9A:08:05:46:02 androidboot.standard=1080i_50Hz androidboot.serialno=0010049905010820010B649A08054602  initrd=0x4E00000,0x9EF4D mem=1G mmz=ddr,0,0,420M
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1024MB = 1024MB total
+Memory: 574784k/574784k available, 473792k reserved, 0K highmem
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+    vmalloc : 0xc0800000 - 0xff000000   (1000 MB)
+    lowmem  : 0x80000000 - 0xc0000000   (1024 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .text : 0x80008000 - 0x80e39134   (14533 kB)
+      .init : 0x80e3a000 - 0x80ea7fc0   ( 440 kB)
+      .data : 0x80ea8000 - 0x80fd33e8   (1197 kB)
+       .bss : 0x80fd33e8 - 0x811ac3dc   (1892 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Hierarchical RCU implementation.
+NR_IRQS:192
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 178956ms
+Console: colour dummy device 80x30
+Calibrating delay loop... 1949.69 BogoMIPS (lpj=974848)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+ftrace: allocating 31787 entries in 94 pages
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x80aa3a68 - 0x80aa3ac0
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (7829.50 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+[300 ERROR-Invalid]:MCE_Init[1856]:ERR: get PDM Param
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 8 bytes.
+Serial: AMBA PL011 UART driver
+uart:0: ttyAMA0 at MMIO 0xf8b00000 (irq = 81) is a PL011 rev2
+console [ttyAMA0] enabled
+uart:1: ttyAMA1 at MMIO 0xf8006000 (irq = 82) is a PL011 rev2
+uart:2: ttyAMA2 at MMIO 0xf8b02000 (irq = 83) is a PL011 rev2
+bio: create slab <bio-0> at 0
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+Linux video capture interface: v2.00
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.16
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+Switching to clocksource timer3
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+TCP: reno registered
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 632K (84e00000 - 84e9e000)
+NetWinder Floating Point Emulator V0.97 (double precision)
+CPU PMU: probing PMU on CPU 2
+hw perfevents: enabled with ARMv7 Cortex-A7 PMU driver, 5 counters available
+Hibernate drv partition: offset 0x6E00000, size 0x800000
+Hibernate snapshot partition: offset 0x7600000, size 0x12C00000
+Hisilicon Pm!! module loaded
+VFS: Disk quotas dquot_6.5.2
+Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Registering sdcardfs 2.1.4
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+fuse init (API version 7.22)
+msgmni has been set to 1971
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+io scheduler noop registered
+io scheduler deadline registered (default)
+io scheduler cfq registered
+brd: module loaded
+loop: module loaded
+input: Hi keyboard as /devices/virtual/input/input0
+input: Hi mouse as /devices/virtual/input/input1
+input: qwerty as /devices/virtual/input/input2
+Hi Android vinput driver init successful!
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+libphy: himii: probed
+Up port phy at 0x01 is connect
+libphy: PHY himii:1f not found
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbotg: usb otg driver registeredusbcore: registered new interface driver cdc_wdm
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+dwc_otg: version 3.00a 10-AUG-2012
+Core Release: 3.10a
+Setting default values for core params
+Using Buffer DMA mode
+Dedicated Tx FIFOs mode
+g_ffs: file system registered
+>>>  init /projects/projects/ANDROID-Hi3798M-YUNOS-EMMC-kk-4.4/device/hisilicon/bigfish/sdk/source/kernel/linux-3.10.y/drivers/usb/usbir/usb-ir.c  usb_usbir_init
+usbcore: registered new interface driver usbir
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+device-mapper: ioctl: 4.24.0-ioctl (2013-01-15) initialised: dm-devel@redhat.com
+mmc0: BKOPS_EN bit is not set
+mmc0: new high speed DDR MMC card at address 0001
+mmcblk0: mmc0:0001 M72808 7.12 GiB 
+hi_mci0: eMMC/MMC/SD Device NOT detected!
+mmcblk0boot0: mmc0:0001 M72808 partition 1 4.00 MiB
+mmcblk0boot1: mmc0:0001 M72808 partition 2 4.00 MiB
+ mmcblk0: p1(fastboot) p2(bootargs) p3(recovery) p4(deviceinfo) p5(baseparam) p6(pqparam) p7(logo) p8(fastplay) p9(kernel) p10(misc) p11(userapi) p12(hibdrv) p13(qbflag) p14(qbdata) p15(private) p16(cache) p17(system) p18(userdata)
+hidraw: raw HID events driver (C) Jiri Kosina
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+zram: Created 1 device(s) ...
+ashmem: initialized
+logger: created 256K log 'log_main'
+logger: created 256K log 'log_events'
+logger: created 256K log 'log_radio'
+logger: created 256K log 'log_system'
+ mmcblk0boot1: unknown partition table
+ mmcblk0boot0: unknown partition table
+
+Mali: Mali device driver loaded
+usbcore: registered new interface driver snd-usb-audio
+oprofile: using timer interrupt.
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (15774 buckets, 63096 max)
+ctnetlink v0.93: registering with nfnetlink.
+NF_TPROXY: Transparent proxy support initialized, version 4.1.0
+NF_TPROXY: Copyright (c) 2006-2007 BalaBit IT Ltd.
+xt_time: kernel timezone is -0000
+IPVS: Registered protocols ()
+IPVS: Connection hash table configured (size=4096, memory=32Kbytes)
+IPVS: Creating netns size=776 id=0
+IPVS: ipvs loaded.
+ip_tables: (C) 2000-2006 Netfilter Core Team
+ipt_CLUSTERIP: ClusterIP Version 0.8 loaded successfully
+arp_tables: (C) 2002 David S. Miller
+TCP: cubic registered
+NET: Registered protocol family 10
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+NET: Registered protocol family 17
+Bridge firewalling registered
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+lib80211: common routines for IEEE802.11 drivers
+Key type dns_resolver registered
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+console [netcon0] enabled
+netconsole: network logging started
+Load hi_tde.ko success.		(SDK_VERSION:[HiSTBAndroidV600R001C00CP0007_v2016022217] Build Time:[Aug 29 2017, 00:51:30])
+Load hi_fb.ko success.		(SDK_VERSION:[HiSTBAndroidV600R001C00CP0007_v2016022217] Build Time:[Aug 29 2017, 00:49:51])
+Load hi_jpegdec.ko success.	(SDK_VERSION:[HiSTBAndroidV600R001C00CP0007_v2016022217] Build Time:[Aug 29 2017, 00:50:01])
+DieID is locked!
+hisi-sndcard hisi-sndcard:  aiao-hifi <-> hisi-i2s mapping ok
+Load hi_png.ko success.		(SDK_VERSION:[HiSTBAndroidV600R001C00CP0007_v2016022217] Build Time:[Aug 29 2017, 00:51:21])
+Load hi_jpegenc.ko success.	(SDK_VERSION:[HiSTBAndroidV600R001C00CP0007_v2016022217] Build Time:[Aug 29 2017, 00:50:01])
+enter temperature_control_thread
+ALSA device list:
+  #0: HISI-AIAO
+Freeing unused kernel memory: 436K (80e3a000 - 80ea7000)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+init: /init.bigfish.rc: 152: ignored duplicate definition of service 'release_eth0'
+init: /init.bigfish.rc: 157: ignored duplicate definition of service 'release_eth1'
+init:  not 512M version
+init (1): /proc/1/oom_adj is deprecated, please use /proc/1/oom_score_adj instead.
+init: /dev/hw_random not found
+Énit: cannot open '/initlogo.rle'
+EXT4-fs (mmcblk0p17): mounted filesystem with ordered data mode. Opts: (null)
+EXT4-fs (mmcblk0p18): mounted filesystem with ordered data mode. Opts: (null)
+EXT4-fs (mmcblk0p16): mounted filesystem with ordered data mode. Opts: (null)
+EXT4-fs (mmcblk0p15): mounted filesystem with ordered data mode. Opts: (null)
+init: /dev/hw_random not found
+healthd: No charger supplies found
+healthd: BatteryStatusPath not found
+healthd: BatteryHealthPath not found
+init: cannot find '/system/bin/dbus-daemon', disabling 'dbus'
+healthd: BatteryPresentPath not found
+healthd: BatteryCapacityPath not found
+healthd: BatteryVoltagePath not found
+healthd: BatteryTemperaturePath not found
+healthd: BatteryTechnologyPath not found
+binder: 1389:1389 transaction failed 29189, size 0-0
+init: cannot find '/data/data/com.android.smart.terminal.iptv/bin/IptvServ', disabling 'IptvServ'
+init: cannot find '/data/data/com.android.smart.terminal.iptv/bin/sy_tr069', disabling 'sy_tr069'
+init: cannot find '/system/bin/netconfig', disabling 'netconfig'
+init: cannot find '/system/bin/dtvserver', disabling 'dtvserver'
+init: cannot find '/system/bin/gpio-led', disabling 'gpio-led'
+init: cannot find '/system/bin/hidns-sd', disabling 'hidns-sd'
+init: cannot find '/system/bin/usb-driver', disabling 'usb-driver'
+init: property 'sys.powerctl' doesn't exist while expanding '${sys.powerctl}'
+init: powerctl: cannot expand '${sys.powerctl}'
+init: property 'sys.sysctl.extra_free_kbytes' doesn't exist while expanding '${sys.sysctl.extra_free_kbytes}'
+init: cannot expand '${sys.sysctl.extra_free_kbytes}' while writing to '/proc/sys/vm/extra_free_kbytes'
+libphy: himii:01 - Link is Down
+root@OPENBASE_HI3798M:/ # [ir_ioctl][901] ----- ioctl: CMD_IR_OPEN_IRSTD !!! -----
+
+
+Welcome to HiYunOS
+
+
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+hiusb-ehci hiusb-ehci.0: HIUSB EHCI
+hiusb-ehci hiusb-ehci.0: new USB bus registered, assigned bus number 1
+hiusb-ehci hiusb-ehci.0: irq 98, io mem 0xf9890000
+hiusb-ehci hiusb-ehci.0: USB 0.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 2 ports detected
+hiusb-ehci hiusb-ehci.1: HIUSB EHCI
+hiusb-ehci hiusb-ehci.1: new USB bus registered, assigned bus number 2
+hiusb-ehci hiusb-ehci.1: irq 94, io mem 0xf9930000
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+hiusb-ehci hiusb-ehci.1: USB 0.0 started, EHCI 1.00
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+hiusb-ohci hiusb-ohci.0: HIUSB OHCI
+hiusb-ohci hiusb-ohci.0: new USB bus registered, assigned bus number 3
+hiusb-ohci hiusb-ohci.0: irq 99, io mem 0xf9880000
+hub 3-0:1.0: USB hub found
+hub 3-0:1.0: 2 ports detected
+hiusb-ohci hiusb-ohci.1: HIUSB OHCI
+hiusb-ohci hiusb-ohci.1: new USB bus registered, assigned bus number 4
+hiusb-ohci hiusb-ohci.1: irq 95, io mem 0xf9920000
+hub 4-0:1.0: USB hub found
+hub 4-0:1.0: 1 port detected
+rtk_btusb: RTKBT_RELEASE_NAME: 20170401_TV_ANDROID_4.4(Beta)
+rtk_btusb: Realtek Bluetooth USB driver module init, version 4.1.4
+rtk_btusb: Register usb char device interface for BT driver
+usbcore: registered new interface driver rtk_btusb
+tntfs: module license 'Commercial. For support email ntfs-support@tuxera.com.' taints kernel.
+Disabling lock debugging due to kernel taint
+Tuxera NTFS driver 3014.6.29 [Flags: R/W MODULE].
+usb 2-1: new high-speed USB device number 2 using hiusb-ehci
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+usb 3-2: new low-speed USB device number 2 using hiusb-ohci
+input: Logitech USB Optical Mouse as /devices/platform/hiusb-ohci.0/usb3/3-2/3-2:1.0/input/input3
+hid-generic 0003:046D:C06A.0001: input,hidraw0: USB HID v1.11 Mouse [Logitech USB Optical Mouse] on usb-hiusb-ohci-2/input0
+libphy: himii:01 - Link is Up - 100/Full
+IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+input: alitv-sensor as /devices/virtual/input/input4
+input: alitv-mouse as /devices/virtual/input/input5
+input: alitv-Vcontroller as /devices/virtual/input/input6
+input: alitv-motion as /devices/virtual/input/input7
+
+root@OPENBASE_HI3798M:/ # cd /systwarning: `zygote' uses 32-bit capabilities (legacy support in use)
+root@OPENBASE_HI3798M:/ # cd /system/                                          approot@OPENBASE_HI3798M:/ # cd /system/app/                                      
+root@OPENBASE_HI3798M:/system/app # ll lowmemorykiller: lowmem_shrink: convert oom_adj to oom_score_adj:
+lowmemorykiller: oom_adj 0 => oom_score_adj 0
+lowmemorykiller: oom_adj 1 => oom_score_adj 58
+lowmemorykiller: oom_adj 2 => oom_score_adj 117
+lowmemorykiller: oom_adj 3 => oom_score_adj 176
+lowmemorykiller: oom_adj 9 => oom_score_adj 529
+lowmemorykiller: oom_adj 15 => oom_score_adj 1000
+|grpppoe-status: pppoe is running!
+		I will stop it frist
+The last session is , to kill it.
+epsdcardfs: version 2.1.4
+sdcardfs: dev_name -> /data/media
+sdcardfs: options -> derive=legacy,reserved_mb=100
+sdcardfs: created packagelist pkgld/2071
+sdcardfs: read_package_list
+sdcardfs: the sbi->obbpath is found
+ sdcardfs: inotify event: 00000400
+sdcardfs: inotify event: 00008000
+sdcardfs: read_package_list
+cfg80211: Calling CRDA to update world regulatory domain
+RTL871X: module init start
+RTL871X: rtl8188fu v4.3.23_17926.20160531_beta
+RTL871X: build time: Aug 18 2017 20:05:13
+RTL871X: hal_com_config_channel_plan chplan:0x20
+RTL871X: rtw_ndev_init(wlan0) if1 mac_addr=64:9a:08:05:46:03
+RTL871X: rtw_ndev_init(p2p0) if2 mac_addr=66:9a:08:05:46:03
+usbcore: registered new interface driver rtl8188fu
+RTL871X: module init ret=0
+-i IPv6: ADDRCONF(NETDEV_UP): p2p0: link is not ready
+IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+inssdcardfs: inotify event: 00000400
+sdcardfs: inotify event: 00008000
+sdcardfs: read_package_list
+
+1|root@OPENBASE_HI3798M:/system/app # sdcardfs: the sbi->obbpath is found
+
+1|root@OPENBASE_HI3798M:/system/app # 
+1|root@OPENBASE_HI3798M:/system/app # 1|root@OPENBASE_HI3798M:/system/app # ll |grep -i ins                          
+1|root@OPENBASE_HI3798M:/system/app # 1|root@OPENBASE_HI3798M:/system/app # ll |grep -i ins                             upd
+1|root@OPENBASE_HI3798M:/system/app # ll
+-rw-r--r-- root     root      2083193 2008-08-01 20:00 Account.apk
+-rw-r--r-- root     root      1594060 2008-08-01 20:00 AliIME.apk
+-rw-r--r-- root     root      3002906 2008-08-01 20:00 DeviceManager1.6.0.1.apk
+-rw-r--r-- root     root       423575 2008-08-01 20:00 DocumentsUI.apk
+-rw-r--r-- root     root     10050961 2008-08-01 20:00 Geekbench3_v3.0.0.apk
+-rw-r--r-- root     root        11862 2008-08-01 20:00 HTMLViewer.apk
+-rw-r--r-- root     root      1086769 2008-08-01 20:00 HiFileManager.apk
+-rw-r--r-- root     root      2724997 2008-08-01 20:00 HiGallery.apk
+-rw-r--r-- root     root      2587975 2008-08-01 20:00 HiMusic.apk
+-rw-r--r-- root     root       886828 2008-08-01 20:00 HiRMService.apk
+-rw-r--r-- root     root      6343662 2008-08-01 20:00 HiVideoPlayer.apk
+-rw-r--r-- root     root       135049 2008-08-01 20:00 IC.apk
+-rw-r--r-- root     root        69807 2008-08-01 20:00 KeyChain.apk
+-rw-r--r-- root     root       541212 2008-08-01 20:00 MediaAnalytics.apk
+-rw-r--r-- root     root      1294652 2008-08-01 20:00 Miracast.apk
+-rw-r--r-- root     root      6970586 2008-08-01 20:00 MultiMediaPlay2.0.0.apk
+-rw-r--r-- root     root      4322934 2008-08-01 20:00 MusicPlayer2.0.12.apk
+-rw-r--r-- root     root      1516154 2008-08-01 20:00 NibiruAliTV.apk
+-rw-r--r-- root     root       965579 2008-08-01 20:00 NibiruAlipayTV.apk
+-rw-r--r-- root     root         5638 2008-08-01 20:00 PacProcessor.apk
+-rw-r--r-- root     root      7538052 2008-08-01 20:00 PhotoPlayer2.0.0.apk
+-rw-r--r-- root     root        18147 2008-08-01 20:00 PicoTts.apk
+-rw-r--r-- root     root       457090 2008-08-01 20:00 PowerControl.apk
+-rw-r--r-- root     root       227489 2008-08-01 20:00 PrintSpooler.apk
+-rw-r--r-- root     root        57902 2008-08-01 20:00 ServiceSettings.apk
+-rw-r--r-- root     root        50111 2008-08-01 20:00 SystemXiri-unsigned.apk
+-rw-r--r-- root     root      1005981 2008-08-01 20:00 TVActivity.apk
+-rw-r--r-- root     root     12171089 2008-08-01 20:00 TvDefensor.apk
+-rw-r--r-- root     root        10900 2008-08-01 20:00 UserDictionaryProvider.apk
+-rw-r--r-- root     root      5978716 2008-08-01 20:00 VideoPlayer2.0.1.apk
+drwxr-xr-x root     root              1970-01-01 08:00 log
+drwxr-xr-x root     root              1970-01-01 08:00 manifests
+-rw-r--r-- root     root      1045608 2008-08-01 20:00 newactivity.apk
+-rw-r--r-- root     root       791409 2008-08-01 20:00 probe.apk
+root@OPENBASE_HI3798M:/system/app # pss
+ 2052 10008     572m S    com.android.systemui                                 
+ 2150 10011     564m S    com.aliyun.mobile.ime                                
+ 2196 1000      566m S    com.hisilicon.android.hiRMService                    
+ 2211 1000      559m S    com.iflytek.xiri2.system                             
+ 2224 10042     560m S    com.android.hisilicon.pmqo                           
+ 2239 10062     621m S    com.teslacoilsw.launcher                             
+ 2253 10043     559m S    com.android.printspooler                             
+ 2415 1000      560m S    com.hisilicon.android.music                          
+ 2429 10004     558m S    com.android.musicfx                                  
+ 2446 10063     610m S    com.qiyi.video.pad                                   
+ 2519 10027     560m S    com.aliyun.ams.assistantservice                      
+ 2534 10041     558m S    com.svox.pico                                        
+root@OPENBASE_HI3798M:/system/app # pf |grep ams
+nf_conntrack: automatic helper assignment is deprecated and it will be removed soon. Use the iptables CT target to attach helpers instead.
+
+^C
+130|root@OPENBASE_HI3798M:/system/app # pf |grep svox
+package:/system/app/PicoTts.apk=com.svox.pico
+^C
+130|root@OPENBASE_HI3798M:/system/app # mv Pic130|root@OPENBASE_HI3798M:/system/app # mv PicoTts.apk                           ../ba.apk  ../bak01.app/                                                           <
+mv: cannot rename 'PicoTts.apk': Read-only file system
+1|root@OPENBASE_HI3798M:/system/app # The current session is , try to connect.
+busybox setsid pppd  plugin librp-pppoe.so eth0 rp_pppoe_sess  debug logfd 1 lcp-restart 2 noipdefault noauth default-asyncmap show-password nodetach mtu 1492 mru 1492 noaccomp nodeflate nopcomp novj usepeerdns novjccomp lcp-echo-interval 20 lcp-echo-failure 3 user 075742995356@iptv.gd passworinit: untracked pid 2691 exited
+d 60622834 
+
+1|root@OPENBASE_HI3798M:/system/app # rw
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+root@OPENBASE_HI3798M:/system/app # root@OPENBASE_HI3798M:/system/app # rw                                         root@OPENBASE_HI3798M:/system/app # mv PicoTts.apk  ../bak01.app/              
+root@OPENBASE_HI3798M:/system/app # sdcardfs: inotify event: 00000400
+sdcardfs: inotify event: 00008000
+sdcardfs: read_package_list
+
+root@OPENBASE_HI3798M:/system/app # pppd-status: pppd is running!
+		I will stop it frist
+The last session is , to kill it.
+sdcardfs: the sbi->obbpath is found
+The current session is , try to connect.
+busybox setsid pppd  plugin librp-pppoe.so eth0 rp_pppoe_sess  debug logfd 1 lcp-restart 2 noipdefault noauth default-asyncmap show-password nodetach mtu 1492 mru 1492 noaccomp nodeflate nopcomp novj usepeerdns novjccomp lcp-echo-interval 20 lcp-echo-failure 3 user 075742995356init: untracked pid 2867 exited
+@iptv.gd password 60622834 
+
+root@OPENBASE_HI3798M:/system/app # ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 64:9a:08:05:46:02 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::669a:8ff:fe05:4602/64 scope link 
+       valid_lft forever preferred_lft forever
+3: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN qlen 1000
+    link/ether 64:9a:08:05:46:03 brd ff:ff:ff:ff:ff:ff
+4: p2p0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN qlen 1000
+    link/ether 66:9a:08:05:46:03 brd ff:ff:ff:ff:ff:ff
+root@OPENBASE_HI3798M:/system/app # The last session is , to kill it.
+
+root@OPENBASE_HI3798M:/system/app # 
+root@OPENBASE_HI3798M:/system/app # 
+root@OPENBASE_HI3798M:/system/app # ll
+-rw-r--r-- root     root      2083193 2008-08-01 20:00 Account.apk
+-rw-r--r-- root     root      1594060 2008-08-01 20:00 AliIME.apk
+-rw-r--r-- root     root      3002906 2008-08-01 20:00 DeviceManager1.6.0.1.apk
+-rw-r--r-- root     root       423575 2008-08-01 20:00 DocumentsUI.apk
+-rw-r--r-- root     root     10050961 2008-08-01 20:00 Geekbench3_v3.0.0.apk
+-rw-r--r-- root     root        11862 2008-08-01 20:00 HTMLViewer.apk
+-rw-r--r-- root     root      1086769 2008-08-01 20:00 HiFileManager.apk
+-rw-r--r-- root     root      2724997 2008-08-01 20:00 HiGallery.apk
+-rw-r--r-- root     root      2587975 2008-08-01 20:00 HiMusic.apk
+-rw-r--r-- root     root       886828 2008-08-01 20:00 HiRMService.apk
+-rw-r--r-- root     root      6343662 2008-08-01 20:00 HiVideoPlayer.apk
+-rw-r--r-- root     root       135049 2008-08-01 20:00 IC.apk
+-rw-r--r-- root     root        69807 2008-08-01 20:00 KeyChain.apk
+-rw-r--r-- root     root       541212 2008-08-01 20:00 MediaAnalytics.apk
+-rw-r--r-- root     root      1294652 2008-08-01 20:00 Miracast.apk
+-rw-r--r-- root     root      6970586 2008-08-01 20:00 MultiMediaPlay2.0.0.apk
+-rw-r--r-- root     root      4322934 2008-08-01 20:00 MusicPlayer2.0.12.apk
+-rw-r--r-- root     root      1516154 2008-08-01 20:00 NibiruAliTV.apk
+-rw-r--r-- root     root       965579 2008-08-01 20:00 NibiruAlipayTV.apk
+-rw-r--r-- root     root         5638 2008-08-01 20:00 PacProcessor.apk
+-rw-r--r-- root     root      7538052 2008-08-01 20:00 PhotoPlayer2.0.0.apk
+-rw-r--r-- root     root       457090 2008-08-01 20:00 PowerControl.apk
+-rw-r--r-- root     root       227489 2008-08-01 20:00 PrintSpooler.apk
+-rw-r--r-- root     root        57902 2008-08-01 20:00 ServiceSettings.apk
+-rw-r--r-- root     root        50111 2008-08-01 20:00 SystemXiri-unsigned.apk
+-rw-r--r-- root     root      1005981 2008-08-01 20:00 TVActivity.apk
+-rw-r--r-- root     root     12171089 2008-08-01 20:00 TvDefensor.apk
+-rw-r--r-- root     root        10900 2008-08-01 20:00 UserDictionaryProvider.apk
+-rw-r--r-- root     root      5978716 2008-08-01 20:00 VideoPlayer2.0.1.apk
+drwxr-xr-x root     root              1970-01-01 08:00 log
+drwxr-xr-x root     root              1970-01-01 08:00 manifests
+-rw-r--r-- root     root      1045608 2008-08-01 20:00 newactivity.apk
+-rw-r--r-- root     root       791409 2008-08-01 20:00 probe.apk
+root@OPENBASE_HI3798M:/system/app # pss
+ 2052 10008     571m S    com.android.systemui                                 
+ 2150 10011     564m S    com.aliyun.mobile.ime                                
+ 2196 1000      562m S    com.hisilicon.android.hiRMService                    
+ 2211 1000      559m S    com.iflytek.xiri2.system                             
+ 2224 10042     560m S    com.android.hisilicon.pmqo                           
+ 2239 10062     630m S    com.teslacoilsw.launcher                             
+ 2446 10063     614m S    com.qiyi.video.pad                                   
+ 2519 10027     560m S    com.aliyun.ams.assistantservice                      
+ 2616 10063     585m S    com.qiyi.video.pad:bdservice_v1                      
+ 2767 1000      559m S    com.yunos.tv.devicemanager                           
+ 2818 10004     558m S    com.android.musicfx                                  
+ 2836 1000      606m S    com.android.settings                                 
+root@OPENBASE_HI3798M:/system/app # pf |grep hiRMS
+package:/system/app/HiRMService.apk=com.hisilicon.android.hiRMService
+^C
+130|root@OPENBASE_HI3798M:/system/app # mv Hi
+HiFileManager.apk   HiMusic.apk         HiVideoPlayer.apk   
+HiGallery.apk       HiRMService.apk     
+130|root@OPENBASE_HI3798M:/system/app # mv Hi                                  R130|root@OPENBASE_HI3798M:/system/app # mv HiRMService.apk                      ../bae.apk ../bak01.app/                                                           <
+root@OPENBASE_HI3798M:/system/app # sdcardfs: inotify event: 00000400
+sdcardfs: inotify event: 00008000
+sdcardfs: read_package_list
+
+root@OPENBASE_HI3798M:/system/app # pf |grep deviceman
+package:/system/app/DeviceManager1.6.0.1.apk=com.yunos.tv.devicemanager
+^C
+130|root@OPENBASE_HI3798M:/system/app # mv DeveManager1.6.0.1.apk                                                           <  The current session is , try to connect.
+busybox setsid pppd  plugin librp-pppoe.so eth0 rp_pppoe_sess  debug logfd 1 lcp-restart 2 noipdefault noauth default-asyncmap show-password nodetach mtu 1492 mru 1492 noaccomp nodeflate nopcomp novj usepeerdns novjccomp lcp-echo-interval 20 lcp-echo-failure 3 user 075742995356@iptv.gd password 60622834 
+init: untracked pid 3062 exited
+../bakDeviceManager1.6.0.1.apk  ../bak01.app/                                       <
+root@OPENBASE_HI3798M:/system/app # sdcardfs: inotify event: 00000400
+sdcardfs: inotify event: 00008000
+sdcardfs: read_package_list
+
+root@OPENBASE_HI3798M:/system/app # pss
+ 2052 10008     571m S    com.android.systemui                                 
+ 2150 10011     564m S    com.aliyun.mobile.ime                                
+ 2196 1000      561m S    com.hisilicon.android.hiRMService                    
+ 2211 1000      559m S    com.iflytek.xiri2.system                             
+ 2224 10042     560m S    com.android.hisilicon.pmqo                           
+ 2239 10062     629m S    com.teslacoilsw.launcher                             
+ 2446 10063     614m S    com.qiyi.video.pad                                   
+ 2519 10027     560m S    com.aliyun.ams.assistantservice                      
+ 2616 10063     585m S    com.qiyi.video.pad:bdservice_v1                      
+ 2836 1000      606m S    com.android.settings                                 
+ 2988 1000      558m S    com.android.keychain                                 
+ 3077 10004     558m S    com.android.musicfx                                  
+root@OPENBASE_HI3798M:/system/app # pppd-status: pppd is running!
+		I will stop it frist
+The last session is , to kill it.
+
+root@OPENBASE_HI3798M:/system/app # cd /cacroot@OPENBASE_HI3798M:/system/app # cd /cache/                                 
+root@OPENBASE_HI3798M:/cache # ll
+drwx------ system   system            2014-01-01 00:00 backup
+drwxrwx--- root     root              1970-01-01 08:00 lost+found
+drwxrwx--- system   cache             2018-05-04 20:11 recovery
+root@OPENBASE_HI3798M:/cache # rm -fr *
+root@OPENBASE_HI3798M:/cache # ll
+root@OPENBASE_HI3798M:/cache # cd /data/dalroot@OPENBASE_HI3798M:/cache # cd /data/dalvik-cache/                          
+root@OPENBASE_HI3798M:/data/dalvik-cache # rm -fr *
+root@OPENBASE_HI3798M:/data/dalvik-cache # cd ..
+root@OPENBASE_HI3798M:/data # rm -fr *
+sdcardfs: inotify event: 00000400
+sdcardfs: inotify event: 00008000
+sdcardfs: missing packages.list; retrying
+root@OPENBASE_HI3798M:/data # linit: Unable to write persistent property to temp file /data/property/.temp.MFxkmX errno: 2
+l
+root@OPENBASE_HI3798M:/data # sdcardfs: missing packages.list_end; retrying
+sdcardfs: missing packages.list; retrying
+ll
+root@OPENBASE_HI3798M:/data # llsdcardfs: missing packages.list_end; retrying
+sdcardfs: missing packages.list; retrying
+
+root@OPENBASE_HI3798M:/data # reboot
+SysRq : Emergency Remount R/O
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+EXT4-fs (mmcblk0p18): re-mounted. Opts: (null)
+EXT4-fs (mmcblk0p16): re-mounted. Opts: (null)
+EXT4-fs (mmcblk0p15): re-mounted. Opts: (null)
+Emergency Remount complete
+Restarting system with command ''.
+CPU will restart.þ
+Bootrom start
+Boot from eMMC
+Starting fastboot ...
+
+
+System startup
+DDRS
+Reg Version:  v1.1.0
+Reg Time:     2016/1/18  14:01:18
+Reg Name:     hi3798mdmo1g_hi3798mv100_ddr3_1gbyte_16bitx2_4layers_emmc.reg
+
+Jump to DDR
+
+
+Fastboot 3.3.0 (wangbin@ubuntu) (Sep 20 2017 - 18:00:09)
+
+Fastboot:      Version 3.3.0
+Build Date:    Sep 20 2017, 18:00:28
+CPU:           Hi3798Mv100 
+Boot Media:    eMMC
+DDR Size:      1GB
+
+Check nand flash controller v610. found
+Special NAND id table Version 1.36
+Nand ID: 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
+No NAND device found!!!
+
+MMC/SD controller initialization.
+MMC/SD Card:
+    MID:         0x70
+    Read Block:  512 Bytes
+    Write Block: 512 Bytes
+    Chip Size:   7296M Bytes (High Capacity)
+    Name:        "M7280"
+    Chip Type:   MMC
+    Version:     4.0
+    Speed:       52000000Hz
+    Bus Width:   8bit
+    Boot Addr:   0 Bytes
+
+Boot Env on eMMC
+    Env Offset:          0x00100000
+    Env Size:            0x00010000
+    Env Range:           0x00010000
+product_init,286: Get ID_WORD lock flag : 0
+
+
+SDK Version: HiSTBAndroidV600R001C00CP0007_v2016022217
+
+deviceinfo addr : [0x001200000] 
+[swfastboot_flash_read,36]BaseAddress:0x1200000, DataSize:0x100000, offset:0x0, bytes:0x514
+[sw_devinfo_check,186] start...
+[sw_devinfo_check,204] ok,checksum:0x10b8
+[sw_devinfo_init,54] data at 0x001200000 is ok
+[0] count:[5] name:[serialno] value:[0010049905010820010B649A08054602]
+[1] count:[5] name:[mac] value:[64:9A:08:05:46:02]
+[2] count:[5] name:[standard] value:[1080i_50Hz]
+[3] count:[5] name:[secureline] value:[100]
+[4] count:[5] name:[cmcc_sn] value:[8Q4410820B253797]
+[sw_devinfo_init,81] ok
+[sw_set_gpio,55]
+[sw_set_gpio,174] config cvbs mode
+bootargs:[console=ttyAMA0,115200 blkdevparts=mmcblk0:1M(fastboot),1M(bootargs),16M(recovery),2M(deviceinfo),8M(baseparam),8M(pqparam),8M(logo),32M(fastplay),16M(kernel),2M(misc),8M(userapi),8M(hibdrv),8M(qbflag),300M(qbdata),32M(private),512M(cache),768M(system),5566M(userdata) androidboot.mac=64:9A:08:05:46:02 androidboot.standard=1080i_50Hz androidboot.serialno=0010049905010820010B649A08054602 ]
+sw_ir_detect_recovery begin  500 count 
+No key received
+sw_ir_detect_recovery ok  
+
+Reserve Memory
+    Start Addr:          0x3FFFE000
+    Bound Addr:          0x8D45000
+    Free  Addr:          0x3EB9D000
+    Alloc Block:  Addr        Size
+                  0x3FBFD000       4194304
+                  0x3F8FC000       3145728
+                  0x3F8F9000       8192
+                  0x3F878000       524288
+                  0x3F843000       212992
+                  0x3F742000       1048576
+                  0x3F73E000       12288
+                  0x3F3B9000       3686400
+                  0x3F223000       1658880
+                  0x3EE9E000       3686400
+                  0x3EBA0000       3133440
+                  0x3EB9D000       8192
+
+Hibernate!! drv  phyaddr 0x3FC00000
+Hibernate!! user api phyaddr 0x3F900000
+Hibernate!! userapi  start 0x5E00000, size 0x800000
+Hibernate!! drv  start 0x6600000, size 0x800000
+Hibernate!! flag start 0x6E00000, size 0x800000
+Hibernate!! data start 0x7600000, size 0x12C00000
+Press Ctrl+C to stop autoboot
+
+MMC read: dev # 0, block # 155648, count 20480 ... 20480 blocks read: OK
+
+Found Initrd at 0x04E00000 (Size 651085 Bytes), align at 2048 Bytes
+
+## Booting kernel from Legacy Image at 01ffc7c0 ...
+   Image Name:   Linux-3.10.0_s40
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    7485960 Bytes = 7.1 MiB
+   Load Address: 02000000
+   Entry Point:  02000000
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+Booting Linux on physical CPU 0x0
+Linux version 3.10.0_s40 (jenkins@Jenkins-Pub01) (gcc version 4.4.1 (Hisilicon_v200(gcc4.4-290+glibc-2.11+eabi+nptl)) ) #1 SMP Tue Aug 29 00:52:26 CST 2017
+CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+Machine: bigfish
+cma: CMA: reserved 420 MiB at 24400000
+phy:3fc00000 pfn:3fc00
+phy:3f900000 pfn:3f900
+cma: CMA: reserved 4 MiB at 3ec00000
+Memory policy: ECC disabled, Data cache writealloc
+CPU: Hi3798Mv100 
+PERCPU: Embedded 8 pages/cpu @819b3000 s12224 r8192 d12352 u32768
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 260096
+Kernel command line: console=ttyAMA0,115200 blkdevparts=mmcblk0:1M(fastboot),1M(bootargs),16M(recovery),2M(deviceinfo),8M(baseparam),8M(pqparam),8M(logo),32M(fastplay),16M(kernel),2M(misc),8M(userapi),8M(hibdrv),8M(qbflag),300M(qbdata),32M(private),512M(cache),768M(system),5566M(userdata) androidboot.mac=64:9A:08:05:46:02 androidboot.standard=1080i_50Hz androidboot.serialno=0010049905010820010B649A08054602  initrd=0x4E00000,0x9EF4D mem=1G mmz=ddr,0,0,420M
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1024MB = 1024MB total
+Memory: 574784k/574784k available, 473792k reserved, 0K highmem
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+    vmalloc : 0xc0800000 - 0xff000000   (1000 MB)
+    lowmem  : 0x80000000 - 0xc0000000   (1024 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .text : 0x80008000 - 0x80e39134   (14533 kB)
+      .init : 0x80e3a000 - 0x80ea7fc0   ( 440 kB)
+      .data : 0x80ea8000 - 0x80fd33e8   (1197 kB)
+       .bss : 0x80fd33e8 - 0x811ac3dc   (1892 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Hierarchical RCU implementation.
+NR_IRQS:192
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 178956ms
+Console: colour dummy device 80x30
+Calibrating delay loop... 1949.69 BogoMIPS (lpj=974848)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+ftrace: allocating 31787 entries in 94 pages
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x80aa3a68 - 0x80aa3ac0
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (7829.50 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+[300 ERROR-Invalid]:MCE_Init[1856]:ERR: get PDM Param
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 8 bytes.
+Serial: AMBA PL011 UART driver
+uart:0: ttyAMA0 at MMIO 0xf8b00000 (irq = 81) is a PL011 rev2
+console [ttyAMA0] enabled
+uart:1: ttyAMA1 at MMIO 0xf8006000 (irq = 82) is a PL011 rev2
+uart:2: ttyAMA2 at MMIO 0xf8b02000 (irq = 83) is a PL011 rev2
+bio: create slab <bio-0> at 0
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+Linux video capture interface: v2.00
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.16
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+Switching to clocksource timer3
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+TCP: reno registered
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 632K (84e00000 - 84e9e000)
+NetWinder Floating Point Emulator V0.97 (double precision)
+CPU PMU: probing PMU on CPU 2
+hw perfevents: enabled with ARMv7 Cortex-A7 PMU driver, 5 counters available
+Hibernate drv partition: offset 0x6E00000, size 0x800000
+Hibernate snapshot partition: offset 0x7600000, size 0x12C00000
+Hisilicon Pm!! module loaded
+VFS: Disk quotas dquot_6.5.2
+Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Registering sdcardfs 2.1.4
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+fuse init (API version 7.22)
+msgmni has been set to 1971
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+io scheduler noop registered
+io scheduler deadline registered (default)
+io scheduler cfq registered
+brd: module loaded
+loop: module loaded
+input: Hi keyboard as /devices/virtual/input/input0
+input: Hi mouse as /devices/virtual/input/input1
+input: qwerty as /devices/virtual/input/input2
+Hi Android vinput driver init successful!
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+libphy: himii: probed
+Up port phy at 0x01 is connect
+libphy: PHY himii:1f not found
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbotg: usb otg driver registeredusbcore: registered new interface driver cdc_wdm
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+dwc_otg: version 3.00a 10-AUG-2012
+Core Release: 3.10a
+Setting default values for core params
+Using Buffer DMA mode
+Dedicated Tx FIFOs mode
+g_ffs: file system registered
+>>>  init /projects/projects/ANDROID-Hi3798M-YUNOS-EMMC-kk-4.4/device/hisilicon/bigfish/sdk/source/kernel/linux-3.10.y/drivers/usb/usbir/usb-ir.c  usb_usbir_init
+usbcore: registered new interface driver usbir
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+device-mapper: ioctl: 4.24.0-ioctl (2013-01-15) initialised: dm-devel@redhat.com
+mmc0: BKOPS_EN bit is not set
+hi_mci0: eMMC/MMC/SD Device NOT detected!
+mmc0: new high speed DDR MMC card at address 0001
+mmcblk0: mmc0:0001 M72808 7.12 GiB 
+mmcblk0boot0: mmc0:0001 M72808 partition 1 4.00 MiB
+mmcblk0boot1: mmc0:0001 M72808 partition 2 4.00 MiB
+ mmcblk0: p1(fastboot) p2(bootargs) p3(recovery) p4(deviceinfo) p5(baseparam) p6(pqparam) p7(logo) p8(fastplay) p9(kernel) p10(misc) p11(userapi) p12(hibdrv) p13(qbflag) p14(qbdata) p15(private) p16(cache) p17(system) p18(userdata)
+hidraw: raw HID events driver (C) Jiri Kosina
+ mmcblk0boot1: unknown partition table
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+zram: Created 1 device(s) ...
+ashmem: initialized
+ mmcblk0boot0: unknown partition table
+logger: created 256K log 'log_main'
+logger: created 256K log 'log_events'
+logger: created 256K log 'log_radio'
+logger: created 256K log 'log_system'
+
+Mali: Mali device driver loaded
+usbcore: registered new interface driver snd-usb-audio
+oprofile: using timer interrupt.
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (15774 buckets, 63096 max)
+ctnetlink v0.93: registering with nfnetlink.
+NF_TPROXY: Transparent proxy support initialized, version 4.1.0
+NF_TPROXY: Copyright (c) 2006-2007 BalaBit IT Ltd.
+xt_time: kernel timezone is -0000
+IPVS: Registered protocols ()
+IPVS: Connection hash table configured (size=4096, memory=32Kbytes)
+IPVS: Creating netns size=776 id=0
+IPVS: ipvs loaded.
+ip_tables: (C) 2000-2006 Netfilter Core Team
+ipt_CLUSTERIP: ClusterIP Version 0.8 loaded successfully
+arp_tables: (C) 2002 David S. Miller
+TCP: cubic registered
+NET: Registered protocol family 10
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+NET: Registered protocol family 17
+Bridge firewalling registered
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+lib80211: common routines for IEEE802.11 drivers
+Key type dns_resolver registered
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+console [netcon0] enabled
+netconsole: network logging started
+Load hi_tde.ko success.		(SDK_VERSION:[HiSTBAndroidV600R001C00CP0007_v2016022217] Build Time:[Aug 29 2017, 00:51:30])
+Load hi_fb.ko success.		(SDK_VERSION:[HiSTBAndroidV600R001C00CP0007_v2016022217] Build Time:[Aug 29 2017, 00:49:51])
+Load hi_jpegdec.ko success.	(SDK_VERSION:[HiSTBAndroidV600R001C00CP0007_v2016022217] Build Time:[Aug 29 2017, 00:50:01])
+DieID is locked!
+hisi-sndcard hisi-sndcard:  aiao-hifi <-> hisi-i2s mapping ok
+Load hi_png.ko success.		(SDK_VERSION:[HiSTBAndroidV600R001C00CP0007_v2016022217] Build Time:[Aug 29 2017, 00:51:21])
+Load hi_jpegenc.ko success.	(SDK_VERSION:[HiSTBAndroidV600R001C00CP0007_v2016022217] Build Time:[Aug 29 2017, 00:50:01])
+enter temperature_control_thread
+ALSA device list:
+  #0: HISI-AIAO
+Freeing unused kernel memory: 436K (80e3a000 - 80ea7000)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+init: /init.bigfish.rc: 152: ignored duplicate definition of service 'release_eth0'
+init: /init.bigfish.rc: 157: ignored duplicate definition of service 'release_eth1'
+init:  not 512M version
+init (1): /proc/1/oom_adj is deprecated, please use /proc/1/oom_score_adj instead.
+init: /dev/hw_random not found
+init: cannot open '/initlogo.rle'
+EXT4-fs (mmcblk0p17): mounted filesystem with ordered data mode. Opts: (null)
+EXT4-fs (mmcblk0p18): 693 orphan inodes deleted
+EXT4-fs (mmcblk0p18): recovery complete
+EXT4-fs (mmcblk0p18): mounted filesystem with ordered data mode. Opts: (null)
+EXT4-fs (mmcblk0p16): mounted filesystem with ordered data mode. Opts: (null)
+EXT4-fs (mmcblk0p15): mounted filesystem with ordered data mode. Opts: (null)
+init: /dev/hw_random not found
+healthd: No charger supplies found
+healthd: BatteryStatusPath not found
+healthd: BatteryHealthPath not found
+healthd: BatteryPresentPath not found
+libphy: himii:01 - Link is Down
+healthd: BatteryCapacityPath not found
+healthd: BatteryVoltagePath not found
+init: cannot find '/system/bin/dbus-daemon', disabling 'dbus'
+healthd: BatteryTemperaturePath not found
+healthd: BatteryTechnologyPath not found
+binder: 1389:1389 transaction failed 29189, size 0-0
+init: cannot find '/data/data/com.android.smart.terminal.iptv/bin/IptvServ', disabling 'IptvServ'
+init: cannot find '/data/data/com.android.smart.terminal.iptv/bin/sy_tr069', disabling 'sy_tr069'
+init: cannot find '/system/bin/netconfig', disabling 'netconfig'
+init: cannot find '/system/bin/dtvserver', disabling 'dtvserver'
+init: cannot find '/system/bin/gpio-led', disabling 'gpio-led'
+init: cannot find '/system/bin/hidns-sd', disabling 'hidns-sd'
+init: cannot find '/system/bin/usb-driver', disabling 'usb-driver'
+init: property 'sys.powerctl' doesn't exist while expanding '${sys.powerctl}'
+init: powerctl: cannot expand '${sys.powerctl}'
+init: property 'sys.sysctl.extra_free_kbytes' doesn't exist while expanding '${sys.sysctl.extra_free_kbytes}'
+init: cannot expand '${sys.sysctl.extra_free_kbytes}' while writing to '/proc/sys/vm/extra_free_kbytes'
+root@OPENBASE_HI3798M:/ # 
+
+Welcome to HiYunOS
+
+
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[ir_ioctl][901] ----- ioctl: CMD_IR_OPEN_IRSTD !!! -----
+hiusb-ehci hiusb-ehci.0: HIUSB EHCI
+hiusb-ehci hiusb-ehci.0: new USB bus registered, assigned bus number 1
+hiusb-ehci hiusb-ehci.0: irq 98, io mem 0xf9890000
+hiusb-ehci hiusb-ehci.0: USB 0.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 2 ports detected
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+hiusb-ehci hiusb-ehci.1: HIUSB EHCI
+hiusb-ehci hiusb-ehci.1: new USB bus registered, assigned bus number 2
+hiusb-ehci hiusb-ehci.1: irq 94, io mem 0xf9930000
+hiusb-ehci hiusb-ehci.1: USB 0.0 started, EHCI 1.00
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+hiusb-ohci hiusb-ohci.0: HIUSB OHCI
+hiusb-ohci hiusb-ohci.0: new USB bus registered, assigned bus number 3
+hiusb-ohci hiusb-ohci.0: irq 99, io mem 0xf9880000
+hub 3-0:1.0: USB hub found
+hub 3-0:1.0: 2 ports detected
+hiusb-ohci hiusb-ohci.1: HIUSB OHCI
+hiusb-ohci hiusb-ohci.1: new USB bus registered, assigned bus number 4
+hiusb-ohci hiusb-ohci.1: irq 95, io mem 0xf9920000
+hub 4-0:1.0: USB hub found
+hub 4-0:1.0: 1 port detected
+rtk_btusb: RTKBT_RELEASE_NAME: 20170401_TV_ANDROID_4.4(Beta)
+rtk_btusb: Realtek Bluetooth USB driver module init, version 4.1.4
+rtk_btusb: Register usb char device interface for BT driver
+usbcore: registered new interface driver rtk_btusb
+tntfs: module license 'Commercial. For support email ntfs-support@tuxera.com.' taints kernel.
+Disabling lock debugging due to kernel taint
+Tuxera NTFS driver 3014.6.29 [Flags: R/W MODULE].
+usb 2-1: new high-speed USB device number 2 using hiusb-ehci
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+libphy: himii:01 - Link is Up - 100/Full
+IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+usb 3-2: new low-speed USB device number 2 using hiusb-ohci
+input: Logitech USB Optical Mouse as /devices/platform/hiusb-ohci.0/usb3/3-2/3-2:1.0/input/input3
+hid-generic 0003:046D:C06A.0001: input,hidraw0: USB HID v1.11 Mouse [Logitech USB Optical Mouse] on usb-hiusb-ohci-2/input0
+input: alitv-sensor as /devices/virtual/input/input4
+input: alitv-mouse as /devices/virtual/input/input5
+input: alitv-Vcontroller as /devices/virtual/input/input6
+input: alitv-motion as /devices/virtual/input/input7
+
+root@OPENBASE_HI3798M:/ # warning: `zygote' uses 32-bit capabilities (legacy support in use)
+
+root@OPENBASE_HI3798M:/ # ps
+  PID USER       VSZ STAT COMMAND
+    1 0          612 S    /init 
+    2 0            0 SW   [kthreadd]
+    3 0            0 SW   [ksoftirqd/0]
+    4 0            0 SW   [kworker/0:0]
+    5 0            0 SW<  [kworker/0:0H]
+    6 0            0 SW   [kworker/u8:0]
+    7 0            0 SW   [migration/0]
+    8 0            0 SW   [rcu_bh]
+    9 0            0 SW   [rcu_sched]
+   10 0            0 SW   [migration/1]
+   11 0            0 SW   [ksoftirqd/1]
+   12 0            0 SW   [kworker/1:0]
+   13 0            0 SW<  [kworker/1:0H]
+   14 0            0 SW   [migration/2]
+   15 0            0 SW   [ksoftirqd/2]
+   16 0            0 SW   [kworker/2:0]
+   17 0            0 SW<  [kworker/2:0H]
+   18 0            0 SW   [migration/3]
+   19 0            0 SW   [ksoftirqd/3]
+   20 0            0 SW   [kworker/3:0]
+   21 0            0 SW<  [kworker/3:0H]
+   22 0            0 SW<  [khelper]
+   23 0            0 SW<  [netns]
+   24 0            0 SW   [kworker/u8:1]
+   26 0            0 SW   [kworker/0:1]
+   27 0            0 SW   [kworker/1:1]
+   28 0            0 SW   [kworker/3:1]
+   29 0            0 SW   [kworker/2:1]
+   30 0            0 DW   [log_udisk_task]
+   31 0            0 DW   [HI_VPSS_Process]
+   32 0            0 DW   [HI_WIN_ReleaseF]
+  422 0            0 SW<  [writeback]
+  424 0            0 SW<  [bioset]
+  426 0            0 SW<  [kblockd]
+  438 0            0 SW   [khubd]
+  539 0            0 SW<  [rpciod]
+  550 0            0 SW   [kswapd0]
+  551 0            0 SWN  [ksmd]
+  599 0            0 SW   [fsnotify_mark]
+  617 0            0 SW<  [nfsiod]
+  621 0            0 SW<  [cifsiod]
+  628 0            0 SW<  [crypto]
+  648 0            0 SW   [kapmd]
+  720 0            0 DW   [usb-otg]
+  728 0            0 SW<  [dwc_otg]
+  739 0            0 SW<  [kpsmoused]
+  747 0            0 SW   [cfinteractive]
+  752 0            0 SW   [kworker/u8:2]
+  755 0            0 SW   [mmcqd/0]
+  756 0            0 SW   [mmcqd/0boot0]
+  757 0            0 SW   [mmcqd/0boot1]
+  864 0            0 SW   [vmalloc]
+  867 0            0 SW<  [binder]
+  898 0            0 SW<  [mali_dvfs]
+  900 0            0 SW<  [kworker/u9:0]
+  922 0            0 SW<  [krfcommd]
+  926 0            0 SW<  [deferwq]
+ 1051 0            0 DW   [temperature_con]
+ 1055 0          532 S    /sbin/ueventd 
+ 1381 0            0 SW   [jbd2/mmcblk0p17]
+ 1382 0            0 SW<  [ext4-dio-unwrit]
+ 1383 0            0 SW   [jbd2/mmcblk0p18]
+ 1384 0            0 SW<  [ext4-dio-unwrit]
+ 1385 0            0 SW   [jbd2/mmcblk0p16]
+ 1386 0            0 SW<  [ext4-dio-unwrit]
+ 1387 0            0 SW   [jbd2/mmcblk0p15]
+ 1388 0            0 SW<  [ext4-dio-unwrit]
+ 1389 0         1428 S    /sbin/healthd 
+ 1390 1000      1000 S    /system/bin/servicemanager 
+ 1391 0        13556 S    /system/bin/vold 
+ 1392 0         3320 S    /system/bin/uuid -d -initsetuuidforce 
+ 1394 0        10648 S    /system/bin/netd 
+ 1395 0         1028 S    /system/bin/debuggerd 
+ 1396 1000     44764 S <  /system/bin/surfaceflinger 
+ 1397 0         550m S    zygote /bin/app_process -Xzygote /system/bin --zygote
+ 1398 1019      7308 S    /system/bin/drmserver 
+ 1399 1013     37348 S    /system/bin/mediaserver 
+ 1402 1017      3344 S    /system/bin/keystore /data/misc/keystore 
+ 1403 0          920 S    /system/bin/sh /system/bin/yunos_sensor_init.sh 
+ 1404 0        31684 S    /system/bin/swRootService 
+ 1405 0         2060 S    /system/bin/udpsvd -vE 0.0.0.0 69 tftpd -cr /system/r
+ 1406 0         3308 S    xirisvc2.3.0 iriservice 
+ 1407 0         6736 S    /system/bin/frontPanel 
+ 1408 0        12240 S    /system/bin/hiaoservice 
+ 1409 0        11884 S    /system/bin/hisysmanager 
+ 1410 0        29540 S    /system/bin/displaysetting 
+ 1411 0         6272 S    /system/bin/hikaraokeservice 
+ 1412 0        27432 S    /system/bin/pqsetting 
+ 1413 0         3604 S    /system/bin/configserver 
+ 1415 0         9220 S    /system/bin/android_ir_user 
+ 1419 0          932 S    /system/bin/sh 
+ 1436 0         5324 S    svcxdrive .0 iriservice 
+ 1593 0         3876 S    /system/bin/input_boost_helper 
+ 1600 0            0 SW<  [HIFB_WorkQueque]
+ 1601 0            0 SW   [kworker/0:2]
+ 1608 0            0 DW   [HI_HDMI_kThread]
+ 1609 0            0 DW   [HI_HDMI_kCEC]
+ 1613 0            0 DW   [AoEngineTask]
+ 1632 0        33012 S <  /system/bin/bootanimation 
+ 1635 0         6924 S    /data/yunos/bin/input_boost 
+ 1640 0            0 SW   [kworker/2:2]
+ 1740 0            0 SW<  [hisi-alsa-ao]
+ 2034 1000      568m R <  system_server                                        
+ 2077 0         2064 R    busybox ps 
+root@OPENBASE_HI3798M:/ # nf_conntrack: automatic helper assignment is deprecated and it will be removed soon. Use the iptables CT target to attach helpers instead.
+
+root@OPENBASE_HI3798M:/ # iptablroot@OPENBASE_HI3798M:/ # iptables                                              -s -  
+iptables v1.4.11.1: no command specified
+Try `iptables -h' or 'iptables --help' for more information.
+2|root@OPENBASE_HI3798M:/ # 2|root@OPENBASE_HI3798M:/ # iptables                                           -h
+iptables v1.4.11.1
+
+Usage: iptables -[ACD] chain rule-specification [options]
+       iptables -I chain [rulenum] rule-specification [options]
+       iptables -R chain rulenum rule-specification [options]
+       iptables -D chain rulenum [options]
+       iptables -[LS] [chain [rulenum]] [options]
+       iptables -[FZ] [chain] [options]
+       iptables -[NX] chain
+       iptables -E old-chain-name new-chain-name
+       iptables -P chain target [options]
+       iptables -h (print this help information)
+
+Commands:
+Either long or short options are allowed.
+  --append  -A chain		Append to chain
+  --check   -C chain		Check for the existence of a rule
+  --delete  -D chain		Delete matching rule from chain
+  --delete  -D chain rulenum
+				Delete rule rulenum (1 = first) from chain
+  --insert  -I chain [rulenum]
+				Insert in chain as rulenum (default 1=first)
+  --replace -R chain rulenum
+				Replace rule rulenum (1 = first) in chain
+  --list    -L [chain [rulenum]]
+				List the rules in a chain or all chains
+  --list-rules -S [chain [rulenum]]
+				Print the rules in a chain or all chains
+  --flush   -F [chain]		Delete all rules in  chain or all chains
+  --zero    -Z [chain [rulenum]]
+				Zero counters in chain or all chains
+  --new     -N chain		Create a new user-defined chain
+  --delete-chain
+            -X [chain]		Delete a user-defined chain
+  --policy  -P chain target
+				Change policy on chain to target
+  --rename-chain
+            -E old-chain new-chain
+				Change chain name, (moving any references)
+Options:
+    --ipv4	-4		Nothing (line is ignored by ip6tables-restore)
+    --ipv6	-6		Error (line is ignored by iptables-restore)
+[!] --proto	-p proto	protocol: by number or name, eg. `tcp'
+[!] --source	-s address[/mask][...]
+				source specification
+[!] --destination -d address[/mask][...]
+				destination specification
+[!] --in-interface -i input name[+]
+				network interface name ([+] for wildcard)
+ --jump	-j target
+				target for rule (may load target extension)
+  --goto      -g chain
+                              jump to chain with no return
+  --match	-m match
+				extended match (may load extension)
+  --numeric	-n		numeric output of addresses and ports
+[!] --out-interface -o output name[+]
+				network interface name ([+] for wildcard)
+  --table	-t table	table to manipulate (default: `filter')
+  --verbose	-v		verbose mode
+  --line-numbers		print line numbers when listing
+  --exact	-x		expand numbers (display exact values)
+[!] --fragment	-f		match second or further fragments only
+  --modprobe=<command>		try to insert modules using this command
+  --set-counters PKTS BYTES	set the counter during insert/append
+[!] --version	-V		print package version.
+root@OPENBASE_HI3798M:/ # root@OPENBASE_HI3798M:/ # iptables -h                                           - - s
+iptables v1.4.11.1: option "-s" requires an argument
+Try `iptables -h' or 'iptables --help' for more information.
+2|root@OPENBASE_HI3798M:/ # 2|root@OPENBASE_HI3798M:/ # iptables -s                                         S
+-P INPUT ACCEPT
+-P FORWARD ACCEPT
+-P OUTPUT ACCEPT
+-N bw_FORWARD
+-N bw_INPUT
+-N bw_OUTPUT
+-N bw_costly_shared
+-N bw_happy_box
+-N bw_penalty_box
+-N fw_FORWARD
+-N fw_INPUT
+-N fw_OUTPUT
+-N natctrl_FORWARD
+-N natctrl_tether_counters
+-N oem_fwd
+-N oem_out
+-N st_filter_OUTPUT
+-A INPUT -j bw_INPUT
+-A INPUT -j fw_INPUT
+-A FORWARD -j oem_fwd
+-A FORWARD -j fw_FORWARD
+-A FORWARD -j bw_FORWARD
+-A FORWARD -j natctrl_FORWARD
+-A OUTPUT -j oem_out
+-A OUTPUT -j fw_OUTPUT
+-A OUTPUT -j bw_OUTPUT
+-A OUTPUT -j st_filter_OUTPUT
+-A bw_INPUT -m owner --socket-exists
+-A bw_OUTPUT -m owner --socket-exists
+-A bw_costly_shared -j bw_penalty_box
+-A natctrl_FORWARD -j DROP
+root@OPENBASE_HI3798M:/ # ps
+  PID USER       VSZ STAT COMMAND
+    1 0          612 S    /init 
+    2 0            0 SW   [kthreadd]
+    3 0            0 SW   [ksoftirqd/0]
+    4 0            0 SW   [kworker/0:0]
+    5 0            0 SW<  [kworker/0:0H]
+    6 0            0 SW   [kworker/u8:0]
+    7 0            0 SW   [migration/0]
+    8 0            0 SW   [rcu_bh]
+    9 0            0 SW   [rcu_sched]
+   10 0            0 SW   [migration/1]
+   11 0            0 SW   [ksoftirqd/1]
+   12 0            0 SW   [kworker/1:0]
+   13 0            0 SW<  [kworker/1:0H]
+   14 0            0 SW   [migration/2]
+   15 0            0 SW   [ksoftirqd/2]
+   16 0            0 SW   [kworker/2:0]
+   17 0            0 SW<  [kworker/2:0H]
+   18 0            0 SW   [migration/3]
+   19 0            0 SW   [ksoftirqd/3]
+   20 0            0 SW   [kworker/3:0]
+   21 0            0 SW<  [kworker/3:0H]
+   22 0            0 SW<  [khelper]
+   23 0            0 SW<  [netns]
+   24 0            0 SW   [kworker/u8:1]
+   26 0            0 SW   [kworker/0:1]
+   27 0            0 SW   [kworker/1:1]
+   28 0            0 SW   [kworker/3:1]
+   29 0            0 SW   [kworker/2:1]
+   30 0            0 DW   [log_udisk_task]
+   31 0            0 DW   [HI_VPSS_Process]
+   32 0            0 DW   [HI_WIN_ReleaseF]
+  422 0            0 SW<  [writeback]
+  424 0            0 SW<  [bioset]
+  426 0            0 SW<  [kblockd]
+  438 0            0 SW   [khubd]
+  539 0            0 SW<  [rpciod]
+  550 0            0 SW   [kswapd0]
+  551 0            0 SWN  [ksmd]
+  599 0            0 SW   [fsnotify_mark]
+  617 0            0 SW<  [nfsiod]
+  621 0            0 SW<  [cifsiod]
+  628 0            0 SW<  [crypto]
+  648 0            0 SW   [kapmd]
+  720 0            0 DW   [usb-otg]
+  728 0            0 SW<  [dwc_otg]
+  739 0            0 SW<  [kpsmoused]
+  747 0            0 SW   [cfinteractive]
+  752 0            0 SW   [kworker/u8:2]
+  755 0            0 SW   [mmcqd/0]
+  756 0            0 SW   [mmcqd/0boot0]
+  757 0            0 SW   [mmcqd/0boot1]
+  864 0            0 SW   [vmalloc]
+  867 0            0 SW<  [binder]
+  898 0            0 SW<  [mali_dvfs]
+  900 0            0 SW<  [kworker/u9:0]
+  922 0            0 SW<  [krfcommd]
+  926 0            0 SW<  [deferwq]
+ 1051 0            0 DW   [temperature_con]
+ 1055 0          532 S    /sbin/ueventd 
+ 1381 0            0 SW   [jbd2/mmcblk0p17]
+ 1382 0            0 SW<  [ext4-dio-unwrit]
+ 1383 0            0 SW   [jbd2/mmcblk0p18]
+ 1384 0            0 SW<  [ext4-dio-unwrit]
+ 1385 0            0 SW   [jbd2/mmcblk0p16]
+ 1386 0            0 SW<  [ext4-dio-unwrit]
+ 1387 0            0 SW   [jbd2/mmcblk0p15]
+ 1388 0            0 SW<  [ext4-dio-unwrit]
+ 1389 0         1428 S    /sbin/healthd 
+ 1390 1000      1000 S    /system/bin/servicemanager 
+ 1391 0        13556 S    /system/bin/vold 
+ 1392 0         3320 S    /system/bin/uuid -d -initsetuuidforce 
+ 1395 0         1028 S    /system/bin/debuggerd 
+ 1396 1000     44764 S <  /system/bin/surfaceflinger 
+ 1398 1019      7308 S    /system/bin/drmserver 
+ 1402 1017      3344 S    /system/bin/keystore /data/misc/keystore 
+ 1403 0          920 S    /system/bin/sh /system/bin/yunos_sensor_init.sh 
+ 1404 0        31684 S    /system/bin/swRootService 
+ 1405 0         2060 S    /system/bin/udpsvd -vE 0.0.0.0 69 tftpd -cr /system/r
+ 1406 0         3312 S    xirisvc2.3.0 iriservice 
+ 1407 0         6736 S    /system/bin/frontPanel 
+ 1408 0        12240 S    /system/bin/hiaoservice 
+ 1409 0        11884 S    /system/bin/hisysmanager 
+ 1410 0        29540 S    /system/bin/displaysetting 
+ 1411 0         6272 S    /system/bin/hikaraokeservice 
+ 1412 0        27432 S    /system/bin/pqsetting 
+ 1413 0         3604 S    /system/bin/configserver 
+ 1415 0         9220 S    /system/bin/android_ir_user 
+ 1419 0          932 S    /system/bin/sh 
+ 1436 0         5324 S    svcxdrive .0 iriservice 
+ 1593 0         3876 S    /system/bin/input_boost_helper 
+ 1600 0            0 SW<  [HIFB_WorkQueque]
+ 1601 0            0 SW   [kworker/0:2]
+ 1608 0            0 DW   [HI_HDMI_kThread]
+ 1609 0            0 DW   [HI_HDMI_kCEC]
+ 1613 0            0 DW   [AoEngineTask]
+ 1632 0        33012 S <  /system/bin/bootanimation 
+ 1635 0         6924 S    /data/yunos/bin/input_boost 
+ 1640 0            0 SW   [kworker/2:2]
+ 3205 0         550m S    zygote /bin/app_process -Xzygote /system/bin --zygote
+ 3206 0        10692 S    /system/bin/netd 
+ 3207 1013     37348 S    /system/bin/mediaserver 
+ 3278 0            0 SW<  [hisi-alsa-ao]
+ 3518 0         2064 R    busybox ps 
+root@OPENBASE_HI3798M:/ # top -m 8
+
+
+
+User 26%, System 2%, IOW 0%, IRQ 0%
+User 320 + Nice 0 + Sys 26 + Idle 846 + IOW 2 + IRQ 0 + SIRQ 0 = 1194
+
+  PID PR CPU% S  #THR     VSS     RSS PCY UID      Name
+ 4983  3  27% R    20 581960K  27072K  fg system   system_server
+ 1396  0   0% S    12  44764K   2908K  fg system   /system/bin/surfaceflinger
+ 1613  3   0% D     1      0K      0K unk root     AoEngineTask
+ 1632  2   0% S     6  33012K   4852K  fg root     /system/bin/bootanimation
+ 4994  0   0% R     1   1276K    484K  fg root     top
+ 1410  1   0% S     4  29540K   7836K  fg root     /system/bin/displaysetting
+   30  0   0% D     1      0K      0K  fg root     log_udisk_task
+ 1404  3   0% S     6  31684K   7844K  fg root     /system/bin/swRootService
+
+
+
+User 27%, System 2%, IOW 0%, IRQ 0%
+User 331 + Nice 0 + Sys 25 + Idle 841 + IOW 1 + IRQ 0 + SIRQ 0 = 1198
+
+  PID PR CPU% S  #THR     VSS     RSS PCY UID      Name
+ 4983  2  27% R    20 581900K  25300K  fg system   system_server
+ 1396  0   0% S    12  44764K   2908K  fg system   /system/bin/surfaceflinger
+ 1613  3   0% D     1      0K      0K unk root     AoEngineTask
+ 4994  0   0% R     1   1280K    484K  fg root     top
+ 1632  2   0% S     6  33012K   4852K  fg root     /system/bin/bootanimation
+ 1408  3   0% S     4  12240K   3044K  fg root     /system/bin/hiaoservice
+    6  0   0% S     1      0K      0K  fg root     kworker/u8:0
+  755  0   0% S     1      0K      0K  fg root     mmcqd/0
+
+
+
+User 35%, System 14%, IOW 0%, IRQ 0%
+User 418 + Nice 0 + Sys 178 + Idle 590 + IOW 1 + IRQ 0 + SIRQ 0 = 1187
+
+  PID PR CPU% S  #THR     VSS     RSS PCY UID      Name
+ 1396  0   0% S    12  44764K   2908K  fg system   /system/bin/surfaceflinger
+ 1613  3   0% D     1      0K      0K unk root     AoEngineTask
+ 1632  2   0% S     6  33012K   4852K  fg root     /system/bin/bootanimation
+    9  1   0% S     1      0K      0K  fg root     rcu_sched
+ 4994  0   0% R     1   1280K    484K  fg root     top
+ 1407  2   0% S     3   6736K   1372K  fg root     /system/bin/frontPanel
+ 1051  3   0% D     1      0K      0K  fg root     temperature_con
+  755  0   0% S     1      0K      0K  fg root     mmcqd/0
+
+
+
+User 21%, System 5%, IOW 0%, IRQ 0%
+User 250 + Nice 0 + Sys 69 + Idle 862 + IOW 1 + IRQ 0 + SIRQ 0 = 1182
+
+  PID PR CPU% S  #THR     VSS     RSS PCY UID      Name
+ 5038  0  14% S     4 563220K  38492K  fg root     zygote
+ 1396  0   0% S    12  44764K   2908K  fg system   /system/bin/surfaceflinger
+ 1613  3   0% D     1      0K      0K unk root     AoEngineTask
+ 4994  0   0% R     1   1280K    484K  fg root     top
+   26  0   0% S     1      0K      0K  fg root     kworker/0:1
+ 1632  2   0% S     6  33012K   4852K  fg root     /system/bin/bootanimation
+   29  2   0% S     1      0K      0K  fg root     kworker/2:1
+   28  3   0% S     1      0K      0K  fg root     kworker/3:1
+
+
+
+User 28%, System 1%, IOW 0%, IRQ 0%
+User 336 + Nice 0 + Sys 20 + Idle 835 + IOW 0 + IRQ 0 + SIRQ 1 = 1192
+
+  PID PR CPU% S  #THR     VSS     RSS PCY UID      Name
+ 5350  1  28% R    20 581848K  29312K  fg system   system_server
+ 1396  0   0% S    12  44764K   2908K  fg system   /system/bin/surfaceflinger
+ 1613  3   0% D     1      0K      0K unk root     AoEngineTask
+ 1632  2   0% S     6  33012K   4852K  fg root     /system/bin/bootanimation
+ 4994  2   0% R     1   1280K    484K  fg root     top
+ 5039  1   0% S     8  10692K   1352K  fg root     /system/bin/netd
+ 1415  0   0% S     4   9220K   1828K  fg root     /system/bin/android_ir_user
+   30  0   0% D     1      0K      0K  fg root     log_udisk_task
+
+
+
+User 30%, System 8%, IOW 0%, IRQ 0%
+User 362 + Nice 0 + Sys 96 + Idle 731 + IOW 1 + IRQ 0 + SIRQ 0 = 1190
+
+  PID PR CPU% S  #THR     VSS     RSS PCY UID      Name
+ 1396  1   0% S    12  44764K   2908K  fg system   /system/bin/surfaceflinger
+ 1613  3   0% D     1      0K      0K unk root     AoEngineTask
+ 1632  2   0% S     6  33012K   4852K  fg root     /system/bin/bootanimation
+ 4994  2   0% R     1   1280K    484K  fg root     top
+    9  1   0% S     1      0K      0K  fg root     rcu_sched
+  755  0   0% S     1      0K      0K  fg root     mmcqd/0
+   24  1   0% S     1      0K      0K  fg root     kworker/u8:1
+   30  3   0% D     1      0K      0K  fg root     log_udisk_task
+
+
+
+User 28%, System 11%, IOW 0%, IRQ 0%
+User 343 + Nice 0 + Sys 139 + Idle 703 + IOW 0 + IRQ 0 + SIRQ 0 = 1185
+
+  PID PR CPU% S  #THR     VSS     RSS PCY UID      Name
+ 5408  0  24% R     4 562272K  38632K  fg root     zygote
+ 5409  1   1% S     8  10648K   1268K  fg root     /system/bin/netd
+ 1396  3   0% S    12  44764K   2908K  fg system   /system/bin/surfaceflinger
+ 1613  3   0% D     1      0K      0K unk root     AoEngineTask
+    9  1   0% S     1      0K      0K  fg root     rcu_sched
+   26  0   0% S     1      0K      0K  fg root     kworker/0:1
+ 4994  2   0% R     1   1280K    484K  fg root     top
+   29  2   0% S     1      0K      0K  fg root     kworker/2:1
+
+
+
+User 24%, System 3%, IOW 0%, IRQ 0%
+User 297 + Nice 0 + Sys 40 + Idle 852 + IOW 1 + IRQ 0 + SIRQ 0 = 1190
+
+  PID PR CPU% S  #THR     VSS     RSS PCY UID      Name
+ 5408  0   4% S     4 563220K  38492K  fg root     zygote
+ 1396  2   0% S    12  44764K   2908K  fg system   /system/bin/surfaceflinger
+ 1613  3   0% D     1      0K      0K unk root     AoEngineTask
+ 1632  2   0% S     6  33012K   4852K  fg root     /system/bin/bootanimation
+ 4994  2   0% R     1   1280K    484K  fg root     top
+   26  0   0% S     1      0K      0K  fg root     kworker/0:1
+ 1407  2   0% S     3   6736K   1372K  fg root     /system/bin/frontPanel
+   30  3   0% D     1      0K      0K  fg root     log_udisk_task
+
+
+
+User 27%, System 2%, IOW 0%, IRQ 0%
+User 332 + Nice 0 + Sys 25 + Idle 837 + IOW 0 + IRQ 0 + SIRQ 1 = 1195
+
+  PID PR CPU% S  #THR     VSS     RSS PCY UID      Name
+ 5721  3  28% R    20 581916K  25516K  fg system   system_server
+ 1396  0   0% S    12  44764K   2908K  fg system   /system/bin/surfaceflinger
+ 1613  3   0% D     1      0K      0K unk root     AoEngineTask
+ 1632  2   0% S     6  33012K   4852K  fg root     /system/bin/bootanimation
+ 4994  2   0% R     1   1280K    484K  fg root     top
+   30  1   0% D     1      0K      0K  fg root     log_udisk_task
+    9  0   0% S     1      0K      0K  fg root     rcu_sched
+  752  0   0% S     1      0K      0K  fg root     kworker/u8:2
+
+
+
+User 36%, System 15%, IOW 0%, IRQ 0%
+User 429 + Nice 0 + Sys 182 + Idle 577 + IOW 2 + IRQ 0 + SIRQ 0 = 1190
+
+  PID PR CPU% S  #THR     VSS     RSS PCY UID      Name
+ 1396  0   0% S    12  44764K   2908K  fg system   /system/bin/surfaceflinger
+ 1613  3   0% D     1      0K      0K unk root     AoEngineTask
+ 1632  2   0% S     6  33012K   4852K  fg root     /system/bin/bootanimation
+    9  0   0% S     1      0K      0K  fg root     rcu_sched
+ 4994  2   0% R     1   1280K    484K  fg root     top
+  755  0   0% S     1      0K      0K  fg root     mmcqd/0
+    1  0   0% S     1    612K    452K  fg root     /init
+   26  0   0% S     1      0K      0K  fg root     kworker/0:1
+
+
+
+User 20%, System 5%, IOW 0%, IRQ 0%
+User 243 + Nice 0 + Sys 69 + Idle 866 + IOW 1 + IRQ 0 + SIRQ 0 = 1179
+
+  PID PR CPU% S  #THR     VSS     RSS PCY UID      Name
+ 5776  0  18% S     4 563220K  38492K  fg root     zygote
+ 1396  0   0% S    12  44764K   2908K  fg system   /system/bin/surfaceflinger
+ 1613  3   0% D     1      0K      0K unk root     AoEngineTask
+   26  0   0% S     1      0K      0K  fg root     kworker/0:1
+ 4994  2   0% R     1   1280K    484K  fg root     top
+ 1632  2   0% S     6  33012K   4852K  fg root     /system/bin/bootanimation
+    9  3   0% R     1      0K      0K  fg root     rcu_sched
+  752  1   0% S     1      0K      0K  fg root     kworker/u8:2
+
+
+
+User 28%, System 1%, IOW 0%, IRQ 0%
+User 335 + Nice 0 + Sys 23 + Idle 836 + IOW 0 + IRQ 0 + SIRQ 0 = 1194
+
+  PID PR CPU% S  #THR     VSS     RSS PCY UID      Name
+ 6088  0  28% R    20 581960K  28188K  fg system   system_server
+ 1396  1   0% S    12  44764K   2908K  fg system   /system/bin/surfaceflinger
+ 1613  3   0% D     1      0K      0K unk root     AoEngineTask
+ 4994  2   0% R     1   1280K    484K  fg root     top
+ 1632  2   0% S     6  33012K   4852K  fg root     /system/bin/bootanimation
+  752  0   0% S     1      0K      0K  fg root     kworker/u8:2
+   30  3   0% D     1      0K      0K  fg root     log_udisk_task
+    9  3   0% S     1      0K      0K  fg root     rcu_sched
+
+^C
+130|root@OPENBASE_HI3798M:/ # ps
+  PID USER       VSZ STAT COMMAND
+    1 0          612 S    /init 
+    2 0            0 SW   [kthreadd]
+    3 0            0 SW   [ksoftirqd/0]
+    4 0            0 SW   [kworker/0:0]
+    5 0            0 SW<  [kworker/0:0H]
+    6 0            0 SW   [kworker/u8:0]
+    7 0            0 SW   [migration/0]
+    8 0            0 SW   [rcu_bh]
+    9 0            0 SW   [rcu_sched]
+   10 0            0 SW   [migration/1]
+   11 0            0 SW   [ksoftirqd/1]
+   12 0            0 SW   [kworker/1:0]
+   13 0            0 SW<  [kworker/1:0H]
+   14 0            0 SW   [migration/2]
+   15 0            0 SW   [ksoftirqd/2]
+   16 0            0 SW   [kworker/2:0]
+   17 0            0 SW<  [kworker/2:0H]
+   18 0            0 SW   [migration/3]
+   19 0            0 SW   [ksoftirqd/3]
+   20 0            0 SW   [kworker/3:0]
+   21 0            0 SW<  [kworker/3:0H]
+   22 0            0 SW<  [khelper]
+   23 0            0 SW<  [netns]
+   24 0            0 SW   [kworker/u8:1]
+   26 0            0 SW   [kworker/0:1]
+   27 0            0 SW   [kworker/1:1]
+   28 0            0 SW   [kworker/3:1]
+   29 0            0 SW   [kworker/2:1]
+   30 0            0 DW   [log_udisk_task]
+   31 0            0 DW   [HI_VPSS_Process]
+   32 0            0 DW   [HI_WIN_ReleaseF]
+  422 0            0 SW<  [writeback]
+  424 0            0 SW<  [bioset]
+  426 0            0 SW<  [kblockd]
+  438 0            0 SW   [khubd]
+  539 0            0 SW<  [rpciod]
+  550 0            0 SW   [kswapd0]
+  551 0            0 SWN  [ksmd]
+  599 0            0 SW   [fsnotify_mark]
+  617 0            0 SW<  [nfsiod]
+  621 0            0 SW<  [cifsiod]
+  628 0            0 SW<  [crypto]
+  648 0            0 SW   [kapmd]
+  720 0            0 DW   [usb-otg]
+  728 0            0 SW<  [dwc_otg]
+  739 0            0 SW<  [kpsmoused]
+  747 0            0 SW   [cfinteractive]
+  752 0            0 SW   [kworker/u8:2]
+  755 0            0 SW   [mmcqd/0]
+  756 0            0 SW   [mmcqd/0boot0]
+  757 0            0 SW   [mmcqd/0boot1]
+  864 0            0 SW   [vmalloc]
+  867 0            0 SW<  [binder]
+  898 0            0 SW<  [mali_dvfs]
+  900 0            0 SW<  [kworker/u9:0]
+  922 0            0 SW<  [krfcommd]
+  926 0            0 SW<  [deferwq]
+ 1051 0            0 DW   [temperature_con]
+ 1055 0          532 S    /sbin/ueventd 
+ 1381 0            0 SW   [jbd2/mmcblk0p17]
+ 1382 0            0 SW<  [ext4-dio-unwrit]
+ 1383 0            0 SW   [jbd2/mmcblk0p18]
+ 1384 0            0 SW<  [ext4-dio-unwrit]
+ 1385 0            0 SW   [jbd2/mmcblk0p16]
+ 1386 0            0 SW<  [ext4-dio-unwrit]
+ 1387 0            0 SW   [jbd2/mmcblk0p15]
+ 1388 0            0 SW<  [ext4-dio-unwrit]
+ 1389 0         1428 S    /sbin/healthd 
+ 1390 1000      1000 S    /system/bin/servicemanager 
+ 1391 0        13556 S    /system/bin/vold 
+ 1395 0         1028 S    /system/bin/debuggerd 
+ 1396 1000     44764 S <  /system/bin/surfaceflinger 
+ 1398 1019      7308 S    /system/bin/drmserver 
+ 1402 1017      3344 S    /system/bin/keystore /data/misc/keystore 
+ 1403 0          920 S    /system/bin/sh /system/bin/yunos_sensor_init.sh 
+ 1404 0        31684 S    /system/bin/swRootService 
+ 1405 0         2060 S    /system/bin/udpsvd -vE 0.0.0.0 69 tftpd -cr /system/r
+ 1406 0         3312 S    xirisvc2.3.0 iriservice 
+ 1407 0         6736 S    /system/bin/frontPanel 
+ 1408 0        12240 S    /system/bin/hiaoservice 
+ 1409 0        11884 S    /system/bin/hisysmanager 
+ 1410 0        29540 S    /system/bin/displaysetting 
+ 1411 0         6272 S    /system/bin/hikaraokeservice 
+ 1412 0        27432 S    /system/bin/pqsetting 
+ 1413 0         4632 S    /system/bin/configserver 
+ 1415 0         9220 S    /system/bin/android_ir_user 
+ 1419 0          932 S    /system/bin/sh 
+ 1436 0         5324 S    svcxdrive .0 iriservice 
+ 1593 0         3980 S    /system/bin/input_boost_helper 
+ 1600 0            0 SW<  [HIFB_WorkQueque]
+ 1601 0            0 SW   [kworker/0:2]
+ 1608 0            0 DW   [HI_HDMI_kThread]
+ 1609 0            0 DW   [HI_HDMI_kCEC]
+ 1613 0            0 DW   [AoEngineTask]
+ 1632 0        33012 S <  /system/bin/bootanimation 
+ 1635 0         6924 S    /data/yunos/bin/input_boost 
+ 1640 0            0 SW   [kworker/2:2]
+ 4670 0            0 SW   [kworker/1:2]
+ 6146 9999      508m R    zygote /bin/app_process -Xzygote /system/bin --zygote
+ 6147 0         3272 S    /system/bin/netd 
+ 6148 1013     37348 S    /system/bin/mediaserver 
+ 6209 0            0   []
+ 6221 0            0 SW<  [hisi-alsa-ao]
+ 6344 0         2064 R    busybox ps 
+ 6345 0            0   []
+root@OPENBASE_HI3798M:/ # reboot 
+130|root@OPENBASE_HI3798M:/ # cat 
+Bootrom start
+Boot from eMMC
+Starting fastboot ...
+
+
+System startup
+DDRS
+Reg Version:  v1.1.0
+Reg Time:     2016/1/18  14:01:18
+Reg Name:     hi3798mdmo1g_hi3798mv100_ddr3_1gbyte_16bitx2_4layers_emmc.reg
+
+Jump to DDR
+
+
+Fastboot 3.3.0 (wangbin@ubuntu) (Sep 20 2017 - 18:00:09)
+
+Fastboot:      Version 3.3.0
+Build Date:    Sep 20 2017, 18:00:28
+CPU:           Hi3798Mv100 
+Boot Media:    eMMC
+DDR Size:      1GB
+
+Check nand flash controller v610. found
+Special NAND id table Version 1.36
+Nand ID: 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
+No NAND device found!!!
+
+MMC/SD controller initialization.
+MMC/SD Card:
+    MID:         0x70
+    Read Block:  512 Bytes
+    Write Block: 512 Bytes
+    Chip Size:   7296M Bytes (High Capacity)
+    Name:        "M7280"
+    Chip Type:   MMC
+    Version:     4.0
+    Speed:       52000000Hz
+    Bus Width:   8bit
+    Boot Addr:   0 Bytes
+
+Boot Env on eMMC
+    Env Offset:          0x00100000
+    Env Size:            0x00010000
+    Env Range:           0x00010000
+product_init,286: Get ID_WORD lock flag : 0
+
+
+SDK Version: HiSTBAndroidV600R001C00CP0007_v2016022217
+
+deviceinfo addr : [0x001200000] 
+[swfastboot_flash_read,36]BaseAddress:0x1200000, DataSize:0x100000, offset:0x0, bytes:0x514
+[sw_devinfo_check,186] start...
+[sw_devinfo_check,204] ok,checksum:0x10b8
+[sw_devinfo_init,54] data at 0x001200000 is ok
+[0] count:[5] name:[serialno] value:[0010049905010820010B649A08054602]
+[1] count:[5] name:[mac] value:[64:9A:08:05:46:02]
+[2] count:[5] name:[standard] value:[1080i_50Hz]
+[3] count:[5] name:[secureline] value:[100]
+[4] count:[5] name:[cmcc_sn] value:[8Q4410820B253797]
+[sw_devinfo_init,81] ok
+[sw_set_gpio,55]
+[sw_set_gpio,174] config cvbs mode
+bootargs:[console=ttyAMA0,115200 blkdevparts=mmcblk0:1M(fastboot),1M(bootargs),16M(recovery),2M(deviceinfo),8M(baseparam),8M(pqparam),8M(logo),32M(fastplay),16M(kernel),2M(misc),8M(userapi),8M(hibdrv),8M(qbflag),300M(qbdata),32M(private),512M(cache),768M(system),5566M(userdata) androidboot.mac=64:9A:08:05:46:02 androidboot.standard=1080i_50Hz androidboot.serialno=0010049905010820010B649A08054602 ]
+sw_ir_detect_recovery begin  500 count 
+No key received
+sw_ir_detect_recovery ok  
+
+Reserve Memory
+    Start Addr:          0x3FFFE000
+    Bound Addr:          0x8D45000
+    Free  Addr:          0x3EB9D000
+    Alloc Block:  Addr        Size
+                  0x3FBFD000       4194304
+                  0x3F8FC000       3145728
+                  0x3F8F9000       8192
+                  0x3F878000       524288
+                  0x3F843000       212992
+                  0x3F742000       1048576
+                  0x3F73E000       12288
+                  0x3F3B9000       3686400
+                  0x3F223000       1658880
+                  0x3EE9E000       3686400
+                  0x3EBA0000       3133440
+                  0x3EB9D000       8192
+
+Hibernate!! drv  phyaddr 0x3FC00000
+Hibernate!! user api phyaddr 0x3F900000
+Hibernate!! userapi  start 0x5E00000, size 0x800000
+Hibernate!! drv  start 0x6600000, size 0x800000
+Hibernate!! flag start 0x6E00000, size 0x800000
+Hibernate!! data start 0x7600000, size 0x12C00000
+Press Ctrl+C to stop autoboot
+
+MMC read: dev # 0, block # 155648, count 20480 ... 20480 blocks read: OK
+
+Found Initrd at 0x04E00000 (Size 651085 Bytes), align at 2048 Bytes
+
+## Booting kernel from Legacy Image at 01ffc7c0 ...
+   Image Name:   Linux-3.10.0_s40
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    7485960 Bytes = 7.1 MiB
+   Load Address: 02000000
+   Entry Point:  02000000
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+Booting Linux on physical CPU 0x0
+Linux version 3.10.0_s40 (jenkins@Jenkins-Pub01) (gcc version 4.4.1 (Hisilicon_v200(gcc4.4-290+glibc-2.11+eabi+nptl)) ) #1 SMP Tue Aug 29 00:52:26 CST 2017
+CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+Machine: bigfish
+cma: CMA: reserved 420 MiB at 24400000
+phy:3fc00000 pfn:3fc00
+phy:3f900000 pfn:3f900
+cma: CMA: reserved 4 MiB at 3ec00000
+Memory policy: ECC disabled, Data cache writealloc
+CPU: Hi3798Mv100 
+PERCPU: Embedded 8 pages/cpu @819b3000 s12224 r8192 d12352 u32768
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 260096
+Kernel command line: console=ttyAMA0,115200 blkdevparts=mmcblk0:1M(fastboot),1M(bootargs),16M(recovery),2M(deviceinfo),8M(baseparam),8M(pqparam),8M(logo),32M(fastplay),16M(kernel),2M(misc),8M(userapi),8M(hibdrv),8M(qbflag),300M(qbdata),32M(private),512M(cache),768M(system),5566M(userdata) androidboot.mac=64:9A:08:05:46:02 androidboot.standard=1080i_50Hz androidboot.serialno=0010049905010820010B649A08054602  initrd=0x4E00000,0x9EF4D mem=1G mmz=ddr,0,0,420M
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1024MB = 1024MB total
+Memory: 574784k/574784k available, 473792k reserved, 0K highmem
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+    vmalloc : 0xc0800000 - 0xff000000   (1000 MB)
+    lowmem  : 0x80000000 - 0xc0000000   (1024 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .text : 0x80008000 - 0x80e39134   (14533 kB)
+      .init : 0x80e3a000 - 0x80ea7fc0   ( 440 kB)
+      .data : 0x80ea8000 - 0x80fd33e8   (1197 kB)
+       .bss : 0x80fd33e8 - 0x811ac3dc   (1892 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Hierarchical RCU implementation.
+NR_IRQS:192
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 178956ms
+Console: colour dummy device 80x30
+Calibrating delay loop... 1949.69 BogoMIPS (lpj=974848)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+ftrace: allocating 31787 entries in 94 pages
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x80aa3a68 - 0x80aa3ac0
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (7829.50 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+[300 ERROR-Invalid]:MCE_Init[1856]:ERR: get PDM Param
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 8 bytes.
+Serial: AMBA PL011 UART driver
+uart:0: ttyAMA0 at MMIO 0xf8b00000 (irq = 81) is a PL011 rev2
+console [ttyAMA0] enabled
+uart:1: ttyAMA1 at MMIO 0xf8006000 (irq = 82) is a PL011 rev2
+uart:2: ttyAMA2 at MMIO 0xf8b02000 (irq = 83) is a PL011 rev2
+bio: create slab <bio-0> at 0
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+Linux video capture interface: v2.00
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.16
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+Switching to clocksource timer3
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+TCP: reno registered
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 632K (84e00000 - 84e9e000)
+NetWinder Floating Point Emulator V0.97 (double precision)
+CPU PMU: probing PMU on CPU 2
+hw perfevents: enabled with ARMv7 Cortex-A7 PMU driver, 5 counters available
+Hibernate drv partition: offset 0x6E00000, size 0x800000
+Hibernate snapshot partition: offset 0x7600000, size 0x12C00000
+Hisilicon Pm!! module loaded
+VFS: Disk quotas dquot_6.5.2
+Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Registering sdcardfs 2.1.4
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+fuse init (API version 7.22)
+msgmni has been set to 1971
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+io scheduler noop registered
+io scheduler deadline registered (default)
+io scheduler cfq registered
+brd: module loaded
+loop: module loaded
+input: Hi keyboard as /devices/virtual/input/input0
+input: Hi mouse as /devices/virtual/input/input1
+input: qwerty as /devices/virtual/input/input2
+Hi Android vinput driver init successful!
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+libphy: himii: probed
+Up port phy at 0x01 is connect
+libphy: PHY himii:1f not found
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbotg: usb otg driver registeredusbcore: registered new interface driver cdc_wdm
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+dwc_otg: version 3.00a 10-AUG-2012
+Core Release: 3.10a
+Setting default values for core params
+Using Buffer DMA mode
+Dedicated Tx FIFOs mode
+g_ffs: file system registered
+>>>  init /projects/projects/ANDROID-Hi3798M-YUNOS-EMMC-kk-4.4/device/hisilicon/bigfish/sdk/source/kernel/linux-3.10.y/drivers/usb/usbir/usb-ir.c  usb_usbir_init
+usbcore: registered new interface driver usbir
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+device-mapper: ioctl: 4.24.0-ioctl (2013-01-15) initialised: dm-devel@redhat.com
+hi_mci0: eMMC/MMC/SD Device NOT detected!
+mmc0: BKOPS_EN bit is not set
+mmc0: new high speed DDR MMC card at address 0001
+mmcblk0: mmc0:0001 M72808 7.12 GiB 
+mmcblk0boot0: mmc0:0001 M72808 partition 1 4.00 MiB
+hidraw: raw HID events driver (C) Jiri Kosina
+mmcblk0boot1: mmc0:0001 M72808 partition 2 4.00 MiB
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+zram: Created 1 device(s) ...
+ashmem: initialized
+logger: created 256K log 'log_main'
+logger: created 256K log 'log_events'
+logger: created 256K log 'log_radio'
+logger: created 256K log 'log_system'
+ mmcblk0: p1(fastboot) p2(bootargs) p3(recovery) p4(deviceinfo) p5(baseparam) p6(pqparam) p7(logo) p8(fastplay) p9(kernel) p10(misc) p11(userapi) p12(hibdrv) p13(qbflag) p14(qbdata) p15(private) p16(cache) p17(system) p18(userdata)
+
+Mali: Mali device driver loaded
+usbcore: registered new interface driver snd-usb-audio
+oprofile: using timer interrupt.
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (15774 buckets, 63096 max)
+ mmcblk0boot1: unknown partition table
+ctnetlink v0.93: registering with nfnetlink.
+NF_TPROXY: Transparent proxy support initialized, version 4.1.0
+NF_TPROXY: Copyright (c) 2006-2007 BalaBit IT Ltd.
+xt_time: kernel timezone is -0000
+IPVS: Registered protocols ()
+IPVS: Connection hash table configured (size=4096, memory=32Kbytes)
+IPVS: Creating netns size=776 id=0
+IPVS: ipvs loaded.
+ip_tables: (C) 2000-2006 Netfilter Core Team
+ipt_CLUSTERIP: ClusterIP Version 0.8 loaded successfully
+arp_tables: (C) 2002 David S. Miller
+TCP: cubic registered
+NET: Registered protocol family 10
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+NET: Registered protocol family 17
+Bridge firewalling registered
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+lib80211: common routines for IEEE802.11 drivers
+Key type dns_resolver registered
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+ mmcblk0boot0: unknown partition table
+console [netcon0] enabled
+netconsole: network logging started
+Load hi_tde.ko success.		(SDK_VERSION:[HiSTBAndroidV600R001C00CP0007_v2016022217] Build Time:[Aug 29 2017, 00:51:30])
+Load hi_fb.ko success.		(SDK_VERSION:[HiSTBAndroidV600R001C00CP0007_v2016022217] Build Time:[Aug 29 2017, 00:49:51])
+Load hi_jpegdec.ko success.	(SDK_VERSION:[HiSTBAndroidV600R001C00CP0007_v2016022217] Build Time:[Aug 29 2017, 00:50:01])
+DieID is locked!
+hisi-sndcard hisi-sndcard:  aiao-hifi <-> hisi-i2s mapping ok
+Load hi_png.ko success.		(SDK_VERSION:[HiSTBAndroidV600R001C00CP0007_v2016022217] Build Time:[Aug 29 2017, 00:51:21])
+Load hi_jpegenc.ko success.	(SDK_VERSION:[HiSTBAndroidV600R001C00CP0007_v2016022217] Build Time:[Aug 29 2017, 00:50:01])
+enter temperature_control_thread
+ALSA device list:
+  #0: HISI-AIAO
+Freeing unused kernel memory: 436K (80e3a000 - 80ea7000)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+init: /init.bigfish.rc: 152: ignored duplicate definition of service 'release_eth0'
+init: /init.bigfish.rc: 157: ignored duplicate definition of service 'release_eth1'
+init:  not 512M version
+init (1): /proc/1/oom_adj is deprecated, please use /proc/1/oom_score_adj instead.
+init: /dev/hw_random not found
+Ñnit: cannot open '/initlogo.rle'
+EXT4-fs (mmcblk0p17): mounted filesystem with ordered data mode. Opts: (null)
+EXT4-fs (mmcblk0p18): recovery complete
+EXT4-fs (mmcblk0p18): mounted filesystem with ordered data mode. Opts: (null)
+EXT4-fs (mmcblk0p16): recovery complete
+EXT4-fs (mmcblk0p16): mounted filesystem with ordered data mode. Opts: (null)
+EXT4-fs (mmcblk0p15): recovery complete
+EXT4-fs (mmcblk0p15): mounted filesystem with ordered data mode. Opts: (null)
+init: /dev/hw_random not found
+healthd: No charger supplies found
+healthd: BatteryStatusPath not found
+healthd: BatteryHealthPath not found
+healthd: BatteryPresentPath not found
+healthd: BatteryCapacityPath not found
+healthd: BatteryVoltagePath not found
+init: cannot find '/system/bin/dbus-daemon', disabling 'dbus'
+healthd: BatteryTemperaturePath not found
+healthd: BatteryTechnologyPath not found
+binder: 1390:1390 transaction failed 29189, size 0-0
+init: cannot find '/data/data/com.android.smart.terminal.iptv/bin/IptvServ', disabling 'IptvServ'
+init: cannot find '/data/data/com.android.smart.terminal.iptv/bin/sy_tr069', disabling 'sy_tr069'
+init: cannot find '/system/bin/netconfig', disabling 'netconfig'
+init: cannot find '/system/bin/dtvserver', disabling 'dtvserver'
+init: cannot find '/system/bin/gpio-led', disabling 'gpio-led'
+init: cannot find '/system/bin/hidns-sd', disabling 'hidns-sd'
+init: cannot find '/system/bin/usb-driver', disabling 'usb-driver'
+init: property 'sys.powerctl' doesn't exist while expanding '${sys.powerctl}'
+init: powerctl: cannot expand '${sys.powerctl}'
+init: property 'sys.sysctl.extra_free_kbytes' doesn't exist while expanding '${sys.sysctl.extra_free_kbytes}'
+init: cannot expand '${sys.sysctl.extra_free_kbytes}' while writing to '/proc/sys/vm/extra_free_kbytes'
+root@OPENBASE_HI3798M:/ # 
+
+Welcome to HiYunOS
+
+
+[ir_ioctl][901] ----- ioctl: CMD_IR_OPEN_IRSTD !!! -----
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+hiusb-ehci hiusb-ehci.0: HIUSB EHCI
+hiusb-ehci hiusb-ehci.0: new USB bus registered, assigned bus number 1
+hiusb-ehci hiusb-ehci.0: irq 98, io mem 0xf9890000
+hiusb-ehci hiusb-ehci.0: USB 0.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 2 ports detected
+hiusb-ehci hiusb-ehci.1: HIUSB EHCI
+hiusb-ehci hiusb-ehci.1: new USB bus registered, assigned bus number 2
+hiusb-ehci hiusb-ehci.1: irq 94, io mem 0xf9930000
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+hiusb-ehci hiusb-ehci.1: USB 0.0 started, EHCI 1.00
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+hiusb-ohci hiusb-ohci.0: HIUSB OHCI
+hiusb-ohci hiusb-ohci.0: new USB bus registered, assigned bus number 3
+hiusb-ohci hiusb-ohci.0: irq 99, io mem 0xf9880000
+hub 3-0:1.0: USB hub found
+hub 3-0:1.0: 2 ports detected
+hiusb-ohci hiusb-ohci.1: HIUSB OHCI
+hiusb-ohci hiusb-ohci.1: new USB bus registered, assigned bus number 4
+hiusb-ohci hiusb-ohci.1: irq 95, io mem 0xf9920000
+hub 4-0:1.0: USB hub found
+hub 4-0:1.0: 1 port detected
+rtk_btusb: RTKBT_RELEASE_NAME: 20170401_TV_ANDROID_4.4(Beta)
+rtk_btusb: Realtek Bluetooth USB driver module init, version 4.1.4
+rtk_btusb: Register usb char device interface for BT driver
+usbcore: registered new interface driver rtk_btusb
+tntfs: module license 'Commercial. For support email ntfs-support@tuxera.com.' taints kernel.
+Disabling lock debugging due to kernel taint
+Tuxera NTFS driver 3014.6.29 [Flags: R/W MODULE].
+usb 2-1: new high-speed USB device number 2 using hiusb-ehci
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+usb 3-2: new low-speed USB device number 2 using hiusb-ohci
+EXT4-fs (mmcblk0p17): re-mounted. Opts: (null)
+input: Logitech USB Optical Mouse as /devices/platform/hiusb-ohci.0/usb3/3-2/3-2:1.0/input/input3
+hid-generic 0003:046D:C06A.0001: input,hidraw0: USB HID v1.11 Mouse [Logitech USB Optical Mouse] on usb-hiusb-ohci-2/input0
+input: alitv-sensor as /devices/virtual/input/input4
+input: alitv-mouse as /devices/virtual/input/input5
+input: alitv-Vcontroller as /devices/virtual/input/input6
+input: alitv-motion as /devices/virtual/input/input7
+warning: `zygote' uses 32-bit capabilities (legacy support in use)

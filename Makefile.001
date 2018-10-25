@@ -1,0 +1,295 @@
+all: e1
+m:
+	vim Makefile
+
+define script01
+
+
+alias ll=' toolbox ls -l'
+alias laun=' am start com.teslacoilsw.launcher '
+alias aaa=' while [ 1 ] ; do input keyevent mouse &>/dev/null ;input keyevent KEYCODE_WAKEUP &>/dev/null ; sleep 19 || exit ; done'
+alias rw='mount -o remount,rw /system'
+alias ro='mount -o remount,ro /system'
+alias ww='mount -o remount,rw '
+alias ps='busybox ps'
+alias sort='busybox sort'
+alias pp='pm list package |sort'
+alias pss='ps |sort|busybox grep com\\\.'
+alias focus=' dumpsys activity | busybox grep mFocus '
+alias pf1=' pm list package -f '
+alias pf2=' pf1 |sort'
+alias pf3='dumpsys usagestats |sed -e "s; ;\n;g"|grep ^package= |sort -u |awk -F= "{print \$2}"'
+alias pf4='pf3|grep -i letv'
+alias strings=' busybox strings '
+alias head=' busybox head '
+alias tail=' busybox tail '
+alias sed=' busybox sed '
+alias hexdump=' busybox hexdump '
+
+alias bt1='grep ""  /sys/class/power_supply/b*/{capacity*,*_now,*_ocv,*abled,temp,status,health,charge_type}'
+alias bt2='grep ""  /sys/class/power_supply/*/{health,charge_type}'
+alias bt3='grep ""  /sys/class/power_supply/*/*'
+alias bt4=' pm enable  com.letv.android.wallpaperonline; pm enable  com.letv.android.supermanager '
+alias bt5=' pm clear   com.letv.android.wallpaperonline; pm clear   com.letv.android.supermanager '
+alias bt6=' pm disable com.letv.android.wallpaperonline; pm disable com.letv.android.supermanager '
+
+
+alias bt91='while [ 1 ] ; do bt1 ; echo ; sleep 2 ; done'
+alias bt92='while [ 1 ] ; do bt2 ; echo ; sleep 2 ; done'
+
+
+alias dum='du -sh * |grep [0-9]M |sort -n'
+
+
+
+cd /system/bin
+[ -f ../xbin/busybox     ] && ln -s ../xbin/busybox     busybox
+[ -f ../xbin/busybox-smp ] && ln -s ../xbin/busybox-smp busybox-smp
+[ -f         busybox     ] && ln -s         busybox     busybox-smp
+[ -f ../xbin/busybox     ] && ln -s ../xbin/busybox     busybox-smp
+
+
+cd /system/bin
+for aa1 in ln rm dd nc netstat head tail which vi less sed diff hexdump find wc grep awk du df touch 
+do
+busybox-smp rm ${aa1}
+busybox-smp rm -f ${aa1}
+busybox-smp ln busybox-smp ${aa1}
+done
+
+if [ ! -f /data/ddd.txt ]
+then
+touch /data/ddd.txt 
+sync 
+sleep 300 && reboot
+else
+if [ ! -f /dev/kkk.txt ]
+then
+touch /dev/kkk.txt 
+if [ -d /data/app-lib/com.qiyi.video.pad -o -d /data/app-lib/com.qiyi.video.pad-1 -o -d /data/app-lib/com.qiyi.video.pad-2 ]
+then
+echo 111 > /dev/111.txt
+else
+echo 222 > /dev/222.txt
+sleep 30
+pm install -r /system/preinstall/iqiyi_pad_hd_v7.1.apk 
+pm install -r /system/preinstall/com.antutu.ABenchMark_7.1.0.apk
+sync
+fi
+fi
+fi
+
+ln -s /mnt/usbhost/Storage01 /system/Storage01
+ln -s /mnt/usbhost/Storage02 /system/Storage02
+
+endef
+export script01
+
+define	mustExist01
+com.android.dreams.phototable 
+com.yunos.tv.appstore    
+com.yunos.tv.homeshell
+com.gitvdideo.aliapp
+endef
+
+define	forceDelect01
+com.yunos.alitvguide.states    
+com.yunos.alitvguide    
+com.yunos.tvhelperinstallguider    
+com.yunos.osupdate    
+com.yunos.tv.launchercust    
+endef
+
+define root01
+com.zhiqupk.root 
+com.kingroot.kinguser 
+endef
+
+define app01
+com.softwinner.TvdVideo 
+com.yunos.app.videoplayer 
+com.iflytek.speech 
+com.factory.test 
+com.softwinner.TvdFileManager 
+com.sunchip.hardwaretest 
+com.inphic.aidlservice 
+com.android.providers.downloads 
+endef
+
+define app02
+com.yunos.tv.yingshi.boutique    
+com.yunos.tv.devicemanager    
+com.yunos.tvmgr    
+com.yunos.tv.remoteassistant 
+com.yunos.datacenter 
+com.aliyun.mobile.ime    
+com.yunos.tv.alitvasr    
+com.aliyun.ic 
+com.yunos.account    
+com.yunos.openpppoe    
+com.aliyun.ams.tyid    
+com.aliyun.uuid    
+com.ali.tv.pointsmall    
+com.yunos.tv.childlock    
+com.aliyun.ams.tyid 
+com.yunos.localzone    
+com.sunchiptool.install    
+com.android.backupconfirm    
+com.android.packageinstaller    
+endef
+
+define app03
+com.yunos.tv.airplayserver    
+com.yunos.advert.service    
+com.yunos.tv.app.remotecontrolserver    
+com.yunos.tv.alitvpayservice    
+com.yunos.tv.payment    
+com.nibiru.alipaytv    
+com.ali.tv.gamecenter    
+com.nibiru.play    
+com.yunos.tv.edu    
+com.yunos.tvtaobao    
+endef
+
+define app04
+com.sunchip.uninstallapk 
+com.youloft.calendar.tv    
+com.sunchip.weather    
+com.yunos.tv.safehome    
+com.yunos.openpppoe    
+com.brs.onekeyinstall    
+com.softwinner.dragonbox    
+com.yunos.buyagain    
+com.inphic.changewallpaper    
+com.yunos.app.photoplayer    
+com.yunos.tv.probe    
+com.softwinner.agingdragonbox    
+endef
+
+define app05
+com.yunos.baseservice.cmns_client  
+com.yunos.dlnaserver 
+endef
+
+define app06
+com.mediocre.sprinkle2 
+com.android.certinstaller 
+tv.yuyin.settings 
+com.yunos.tv.miao
+com.avc_mr.datacollectionandroid
+endef
+
+define app071
+com.android.gallery3d
+com.peasun.TVManager
+com.example.android.usbbt
+com.android.gallery3d
+com.peasun.tvui3
+com.android.externalstorage
+com.android.bluetooth
+cn.beevideo
+cn.kuwo.sing.tv
+com.dangbeimarket
+com.dianshiyouhua
+com.elinkway.tvlive2
+com.love.tuidan
+com.molitv.android
+com.moretv.android
+com.peasun.advui
+com.softwinner.agingdragonbox
+com.starcor.mango
+com.tobyyaa.jine
+com.tongji.cesu
+com.wukongtv.wkhelper
+com.xuetangx.tv
+hdpfans.com
+com.softwinner.miracastReceiver
+com.allwinnertech.dragonsn
+com.softwinner.settingsassist
+com.softwinner.tvdsetting
+com.peasun.tvui3
+com.android.gallery3d
+com.peasun.TVManager
+com.peasun.tvui3
+
+endef
+
+define app072
+com.softwinner.update
+com.android.printspooler
+com.hitv.newappmanager
+com.android.onetimeinitializer
+com.shafa.market
+com.android.music
+com.shafa.market.remote
+com.shafa.market.extra
+com.android.wallpaper
+com.ysten.secure
+com.ysten.android.istouch
+com.ysten.productmodel
+com.android.printspooler
+com.android.onetimeinitializer
+screensaver.yst.com.screensaver
+com.android.camera2
+com.chinamobile.middleware.auth
+com.softwinner.agingdragonbox
+com.softwinner.dragonbox
+com.softwinner.update
+endef
+
+eee:=; do   pm enable   $${aa1} ; pm unblock  $${aa1} ; done
+eee:=; do   pm unblock  $${aa1} ; done
+ddd:=; do   pm disable  $${aa1} ; pm block   	$${aa1} ; done
+ddd:=; do   pm block   	$${aa1} ; done
+
+
+spec:=$(strip $(sort $(app071)))
+
+all:=$(strip $(sort $(mustExist01) $(root01) $(forceDelect01) \
+	$(app01) \
+	$(app02) \
+	$(app03) \
+	$(app04) \
+	$(app05) \
+	$(app06) \
+	$(app071) \
+	$(app072) \
+	))
+
+eFile10:=$(strip $(sort $(forceDelect01)))
+eFile11:=$(strip $(sort $(mustExist01) $(root01)))
+eFile12:=$(strip $(sort $(filter-out $(eFile10) $(eFile11) ,$(all))))
+
+
+e1:
+	@echo
+	@echo "$${script01}"
+	@echo
+	@echo ; echo 'for aa1 in $(eFile10) $(ddd)' ; echo 
+	@echo ; echo 'for aa1 in $(eFile11) $(eee)' ; echo 
+	@echo
+	@echo ; echo 'for aa1 in $(eFile12) $(ddd)' ; echo 
+	@echo ; echo 'for aa1 in $(eFile12) $(eee)' ; echo 
+	@echo
+	@echo ; echo 'for aa1 in $(spec) $(eee)' ; echo 
+	@echo ; echo 'for aa1 in $(spec) $(ddd)' ; echo 
+
+
+
+define sed01_for_zte_ztv10_b860av1_1_201608
+
+-e 's;tv1575910285263;tv0000000000000;g' \
+-e 's;itvbf.zj.vnet.cn:8082;127.127.127.127:13322;g' \
+-e 's;itv.zj.vnet.cn:8082;127.10.10.127:33228;g' \
+-e 's;220.187.236.105:8082;127.10.110.127:18281;g' \
+-e 's;122.229.17.2:37021;127.0.10.127:18282;g' \
+-e 's;220.187.236.100:8082;127.10.110.127:18210;g' \
+-e 's;220.187.236.101:8082;127.10.110.127:18211;g' \
+-e 's;220.187.236.102:8082;127.10.110.127:18212;g' \
+-e 's;220.187.236.103:8082;127.10.110.127:18213;g' \
+-e 's;220.187.236.104:8082;127.10.110.127:18214;g' \
+-e 's;115.233.42.195:8082;127.10.10.127:33345;g' \
+-e 's;115.233.42.196:8082;127.10.10.127:33346;g' \
+-e 's;stb.zj.vnet.cn:37021;127.10.210.127:27121;g' \
+
+endef

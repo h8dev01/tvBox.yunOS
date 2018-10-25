@@ -1,0 +1,180 @@
+# com.inphic.launcher 
+
+for aa1 in     \
+com.yunos.alitvguide.states    \
+com.yunos.alitvguide    \
+com.yunos.tvhelperinstallguider    \
+com.yunos.osupdate    \
+com.yunos.tv.launchercust    \
+
+do    pm disable   ${aa1} ; pm block   ${aa1} ; done
+
+for aa1 in     \
+com.yunos.tv.yingshi.boutique    \
+com.yunos.tv.appstore    \
+com.yunos.tv.devicemanager    \
+com.yunos.tvmgr    \
+com.yunos.tv.remoteassistant \
+com.yunos.datacenter \
+com.aliyun.mobile.ime    \
+com.yunos.tv.alitvasr    \
+com.aliyun.ic \
+com.yunos.account    \
+com.yunos.openpppoe    \
+com.aliyun.ams.tyid    \
+com.aliyun.uuid    \
+com.ali.tv.pointsmall    \
+com.yunos.tv.childlock    \
+com.aliyun.ams.tyid \
+com.yunos.localzone    \
+com.sunchiptool.install    \
+com.android.backupconfirm    \
+com.android.packageinstaller    \
+\
+com.yunos.baseservice.cmns_client  \
+com.yunos.dlnaserver \
+
+do   pm enable   ${aa1} ; pm unblock   ${aa1} ; done
+#do   pm disable   ${aa1} ; pm block   ${aa1} ; done
+
+# com.android.dreams.phototable is the screen saver
+#com.android.dreams.phototable \
+
+for aa1 in     \
+com.yunos.tv.airplayserver    \
+com.yunos.advert.service    \
+com.yunos.tv.app.remotecontrolserver    \
+com.yunos.tv.alitvpayservice    \
+com.yunos.tv.payment    \
+com.nibiru.alipaytv    \
+com.ali.tv.gamecenter    \
+com.nibiru.play    \
+com.yunos.tv.edu    \
+com.yunos.tvtaobao    \
+
+do   pm enable   ${aa1} ; pm unblock   ${aa1} ; done
+#       do     pm disable   ${aa1} ; pm block   ${aa1} ; done
+
+for aa1 in     \
+com.sunchip.uninstallapk \
+com.youloft.calendar.tv    \
+com.sunchip.weather    \
+com.yunos.tv.safehome    \
+com.yunos.openpppoe    \
+com.brs.onekeyinstall    \
+com.softwinner.dragonbox    \
+com.yunos.buyagain    \
+com.inphic.changewallpaper    \
+com.yunos.app.photoplayer    \
+com.yunos.tv.probe    \
+com.softwinner.agingdragonbox    \
+
+do   pm enable   ${aa1} ; pm unblock   ${aa1} ; done
+#       do     pm disable   ${aa1} ; pm block   ${aa1} ; done
+
+for aa1 in     \
+com.mediocre.sprinkle2 \
+com.android.certinstaller \
+tv.yuyin.settings \
+
+do   pm enable   ${aa1} ; pm unblock   ${aa1} ; done
+#       do     pm disable   ${aa1} ; pm block   ${aa1} ; done
+
+#       do   pm enable   ${aa1} ; pm unblock   ${aa1} ; done
+# com.kingroot.kinguser
+# com.inphic.launcher
+
+alias laun=' am start com.teslacoilsw.launcher '
+alias aaa=' while [ 1 ] ; do input keyevent mouse &>/dev/null ;input keyevent KEYCODE_WAKEUP &>/dev/null ; sleep 19 || exit ; done'
+alias rw='mount -o remount,rw /system'
+am start com.teslacoilsw.launcher
+while [ 1 ] ; do input keyevent mouse &>/dev/null ;input keyevent KEYCODE_WAKEUP &>/dev/null ; sleep 19 || exit ; done
+
+
+
+pm install /mnt/usbhost/Storage01/SSHelper.apk
+pm install /mnt/usbhost/Storage01/com.teslacoilsw.launcher.Nova_Launcher.5.5.2.apk
+pm install /mnt/usbhost/Storage01/mnt/usbhost/Storage02/iqiyi_pad_hd_v7.1.apk
+
+echo "while [ 1 ] ; do input keyevent mouse &>/dev/null ; sleep 19 ; done" > /system/bin/awake.sh
+chmod 755 /system/bin/awake.sh
+
+echo "busybox-smp ps" >> /system/bin/psps
+chmod 755 /system/bin/psps
+
+cat << EOF9 
+alias laun=' am start com.teslacoilsw.launcher '
+alias aaa=' while [ 1 ] ; do input keyevent mouse &>/dev/null ;input keyevent KEYCODE_WAKEUP &>/dev/null ; sleep 19 || exit ; done'
+alias rw='mount -o remount,rw /system'
+alias ps='busybox-smp ps'
+alias sort='busybox-smp sort'
+alias pp='pm list package |sort'
+alias focus=' dumpsys activity | grep mFocus '
+EOF9 \
+   >> /system/etc/mkshrc
+
+ln -s busybox-smp /system/bin/head
+ln -s busybox-smp /system/bin/tail
+ln -s busybox-smp /system/bin/which
+ln -s busybox-smp /system/bin/vi
+ln -s busybox-smp /system/bin/less
+ln -s busybox-smp /system/bin/sed
+ln -s busybox-smp /system/bin/diff
+ln -s busybox-smp /system/bin/hexdump
+
+cp /system/etc/yunoswhite.list /system/etc/yunoswhite.list.bak01
+cat << EOF1 >> /system/etc/yunoswhite.list
+com.arachnoid.sshelper
+com.mediocre.sprinkle2
+com.qiyi.video.pad
+com.teslacoilsw.launcher
+com.zhiqupk.root
+EOF1
+
+sed -i -e '/^\s*$/d' /system/etc/yunoswhite.list
+
+sed -i -e 's;^/system/bin/input_boost_helper.*$;/system/bin/awake.sh \& mkdir /dev/111 \; /system/bin/input_boost_helper;g' /system/etc/yunos_sensor_init.sh
+chmod 755 /system/etc/yunos_sensor_init.sh
+
+cp /system/etc/yunoswhite.list /system/bin/input_boost_helper
+cat << EOF2 >> /system/bin/input_boost_helper
+#!/bin/sh
+/system/bin/awake.sh &
+exec /system/bin/input_boost_helper
+EOF2
+
+
+
+##### am start com.qiyi.video.pad
+am start com.qiyi.video.pad/org.qiyi.android.video.MainActivity
+
+package resolve-activity --brief  com.qiyi.video.pad
+pm list permissions -d -g
+
+pm block com.ider.iderlauncher_yd12
+
+am start com.android.settings/com.yunos.tv.settings.NetworkSettingActivity
+
+ps |grep com\\. |busybox sort -k 9
+
+#  system/etc目录下有一个文件yunoswhite.list,自定义的Launcher如果要运行必须在里面进行添加，添加在BOOT_COMPLETED段
+#  system/etc目录下有一个文件devicewhite.list,自定义的Launcher如果要运行必须在里面进行添加，添加在BOOT_COMPLETED段
+# format : row lines + package names ,,,you must inc the row lines number
+
+
+for aa1 in     \
+com.zhiqupk.root \
+com.kingroot.kinguser \
+com.softwinner.TvdVideo \
+com.yunos.app.videoplayer \
+com.iflytek.speech \
+com.factory.test \
+com.softwinner.TvdFileManager \
+com.sunchip.hardwaretest \
+com.inphic.aidlservice \
+com.android.providers.downloads \
+
+do   pm enable   ${aa1} ; pm unblock   ${aa1} ; done
+#do   pm disable   ${aa1} ; pm block   ${aa1} ; done
+
+
