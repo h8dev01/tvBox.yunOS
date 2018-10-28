@@ -5,12 +5,12 @@ m:
 define script01
 
 
-alias ll=' toolbox ls -l'
+alias ll=' busybox ls -l'
 alias laun=' am start com.teslacoilsw.launcher '
 alias aaa=' while [ 1 ] ; do input keyevent mouse &>/dev/null ;input keyevent KEYCODE_WAKEUP &>/dev/null ; sleep 19 || exit ; done'
-alias rw='mount -o remount,rw /system'
-alias ro='mount -o remount,ro /system'
-alias ww='mount -o remount,rw '
+alias rw='mount -o rw,remount /system'
+alias ro='mount -o ro,remount /system'
+alias ww='mount -o rw,remount '
 alias ps='busybox ps'
 alias sort='busybox sort'
 alias pp='pm list package |sort'
